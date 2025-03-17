@@ -18,8 +18,9 @@ const OurTestimonial = () => {
     // Memoized styles for performance optimization
     const containerStyles = useMemo(() => ({
         background: "#dfdfdf",
-        width: { xl: "98.9vw", lg: "100vw", md: "98.9vw", sm: '98.9vw', xs: "100vw" },
-        px: { lg: theme.spacing(11), md: theme.spacing(2), sm: theme.spacing(2), xs: theme.spacing(2) },
+        overflow: 'hidden',
+        width: "99vw",
+        px: { lg: theme.spacing(8), md: theme.spacing(2), sm: theme.spacing(2), xs: theme.spacing(2) },
         py: { md: 5, lg: 5, sm: 3, xs: 1 },
     }), [theme]);
 

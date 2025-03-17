@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import T1 from '../../assets/images/tiles/t6.webp';
 import F1 from '../../assets/images/interior/f4.webp';
 import E1 from '../../assets/images/electric/e6.webp';
+import { FiberManualRecord } from '@mui/icons-material';
 
 const OurServices = () => {
     const { spacing, palette } = useTheme();
@@ -34,14 +35,14 @@ const OurServices = () => {
                         left: 0,
                         width: "100%",
                         height: "100%",
-                        backgroundColor: "rgba(0, 0, 0, 0.2)",
+                        backgroundColor: "rgba(0, 0, 0, 0.1)",
                         zIndex: 1,
                     },
                 }}
             >
                 <Stack sx={{ position: "relative", zIndex: 2 }}>
                     <Typography
-                        variant="h3"
+                        variant="h4"
                         fontWeight="bold"
                         textAlign="left"
                         color="white"
@@ -66,12 +67,12 @@ const OurServices = () => {
 
                     {/* Grid 2 - Animate from right */}
                     <Grid item md={5} xs={12} component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} >
-                        <Box component="img" src={F1} sx={{ width: '100%', height: '50vh', pr: 2 }} alt={T1} />
+                        <Box component="img" src={F1} sx={{ width: '100%', height: '40vh', pr: 2 }} alt={T1} />
                     </Grid>
 
                     {/* Grid 2 - Animate from right */}
                     <Grid item md={5} xs={12} component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} >
-                        <Box component="img" src={T1} sx={{ width: '100%', height: '50vh' }} alt={T1} />
+                        <Box component="img" src={T1} sx={{ width: '100%', height: '40vh' }} alt={T1} />
                     </Grid>
                     <Grid item md={7} xs={12} component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} >
                         <Stack spacing={2} sx={{ pl: { md: spacing(5), xs: 0 } }}>
@@ -89,9 +90,9 @@ const OurServices = () => {
 
                     <Grid item md={7} xs={12} component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} >
                         <Stack spacing={2} sx={{ pr: { md: spacing(10), xs: 0 } }}>
-                            <Typography variant='h4' color='primary' fontWeight={'semi-bold'}>Residential Interior Design & Fit-Out</Typography>
+                            <Typography variant='h4' color='primary' fontWeight={'semi-bold'}>Residential Electrical Services</Typography>
                             <Stack spacing={1} sx={{ pr: { md: spacing(0), xs: spacing(0) } }}>
-                                <Typography variant='body2'>Electrical Wiring & Rewiring: Ensuring your home’s electrical system is safe, up-to-date, and fully functional.</Typography>
+                                <Typography variant='body2'> Electrical Wiring & Rewiring: Ensuring your home’s electrical system is safe, up-to-date, and fully functional.</Typography>
                                 <Typography variant='body2'>Lighting Installation: From ambient to task lighting, we install energy-efficient and aesthetically pleasing lighting solutions.</Typography>
                                 <Typography variant='body2'>Panel Upgrades & Circuit Breakers: Upgrading your electrical panel to meet modern electrical demands, enhancing safety and functionality.</Typography>
                                 <Typography variant='body2'>Smart Home Integration: Installation of smart devices and automation systems to control lighting, temperature, and security with ease.</Typography>
@@ -102,7 +103,7 @@ const OurServices = () => {
 
                     {/* Grid 2 - Animate from right */}
                     <Grid item md={5} xs={12} component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} >
-                        <Box component="img" src={E1} sx={{ width: '100%', height: '50vh', pr: 2 }} alt={T1} />
+                        <Box component="img" src={E1} sx={{ width: '100%', height: '40vh', pr: 2 }} alt={T1} />
                     </Grid>
                 </Grid>
             </Box>

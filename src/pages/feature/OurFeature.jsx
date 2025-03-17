@@ -20,7 +20,7 @@ const OurFeature = () => {
     const theme = useTheme();
 
     return (
-        <Box sx={{ py: 4, px: { xs: 2, md: 2, lg: 12, xl: 12 }, background: theme.palette.info.main }}>
+        <Box sx={{ py: 4, px: { xs: 2, md: 2, lg: 8, xl: 8 }, background: theme.palette.info.main }}>
             <Typography variant="h3" fontWeight="bold" color="info.deep" mb={3}>
                 Our Feature
                 <Divider sx={{ background: theme.palette.primary.deep, height: 3, width: 100 }} />
@@ -28,7 +28,7 @@ const OurFeature = () => {
 
             <Grid container spacing={2}>
                 <Grid item xs={12} md={12} lg={12} xl={4}>
-                    <Box sx={{ height: 500, width: "100%", position: "relative", overflow: "hidden", borderRadius: 2 }}>
+                    <Box sx={{ height: 530, width: "100%", position: "relative", overflow: "hidden", borderRadius: 2 }}>
                         <Box sx={{ position: "absolute", height: "90%", width: "90%", background: theme.palette.primary.main, bottom: 1, left: 50, zIndex: 1, borderRadius: 2 }} />
                         <Box sx={{ position: "absolute", height: "85%", width: "88%", border: '2px solid #000', bottom: 50, left: 30, zIndex: 1, borderRadius: 2 }} />
                         <Box sx={{ position: "absolute", height: "100%", width: "100%", top: 20, right: 20, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>

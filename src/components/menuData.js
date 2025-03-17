@@ -2,15 +2,16 @@ export const menuData = [
     { name: "Home", route: "/" },
     { name: "About Us", route: "/aboutus" },
     {
-        name: "Interior",
+        name: "Furniture Showroom",
         subMenu: [
-            { name: "Living Room", route: "/interior/livingroom/title" },
-            { name: "Bedroom", route: "/interior/bedroom/title" },
-            { name: "Kitchen", route: "/interior/kitchen/title" },
+            { name: "Bed", route: "/furniture/beds" },
+            { name: "Table", route: "/furniture/tables" },
+            { name: "Chair", route: "/furniture/chairs" },
+            { name: "Sofa", route: "/furniture/sofa" },
         ],
     },
     {
-        name: "Tiles",
+        name: "Tiles Showroom",
         subMenu: [
             {
                 name: "Living Room",
@@ -27,6 +28,13 @@ export const menuData = [
                 ],
             },
             {
+                name: "Bathroom",
+                subMenu: [
+                    { name: "Bathroom Wall", route: "/tiles/bathroom/wall" },
+                    { name: "Bathroom Floor", route: "/tiles/bathroom/floor" },
+                ],
+            },
+            {
                 name: "Kitchen",
                 subMenu: [
                     { name: "Kitchen Wall", route: "/tiles/kitchen/wall" },
@@ -36,13 +44,14 @@ export const menuData = [
         ],
     },
     {
-        name: "Electrics",
+        name: "Electrics Showroom",
         subMenu: [
-            { name: "Electric 1", route: "/electrics/electric1" },
-            { name: "Electric 2", route: "/electrics/electric2" },
-            { name: "Electric 3", route: "/electrics/electric3" },
+            { name: "Wiring & Cables", route: "/electrics/wire&cable" },
+            { name: "Lighting Installation", route: "/electrics/lightingsolution" },
+            { name: "Switches & Sockets", route: "/electrics/switche$socket" },
         ],
     },
+    { name: "Our Project", route: "/projects" },
     { name: "Gallery", route: "/gallery" },
     { name: "Blogs", route: "/blogs" },
     { name: "Contact Us", route: "/contactus" },

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { tilesData } from "./tilesData";  // Import tiles data
-import ViewComponent from "../../utils/ViewComponent";
+import { tilesData } from "./tilesData";
+import TilesViewComponent from "./TilesViewComponent";
 
 const SingleTiles = () => {
     const [mainTile, setMainTile] = useState(null);
@@ -8,7 +8,7 @@ const SingleTiles = () => {
 
     useEffect(() => {
         // Retrieve the saved tile data from localStorage
-        const savedTile = localStorage.getItem("Tile");
+        const savedTile = localStorage.getItem("Tiles");
 
         if (savedTile) {
             // Parse the data back to an object
@@ -37,7 +37,7 @@ const SingleTiles = () => {
     }
 
     return (
-        <ViewComponent
+        <TilesViewComponent
             view={mainTile}
             latestBlogs={latestTiles}
         />

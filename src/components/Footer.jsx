@@ -40,7 +40,7 @@ const Footer = () => {
             background: theme.palette.info.deep,
             color: theme.palette.info.dark,
             py: 4,
-            px: { xs: 2, sm: 2, md: 2, lg: 12, xl: 12 },
+            px: { xs: 2, sm: 2, md: 2, lg: 9, xl: 9 },
         }}>
             <Grid container spacing={4} justifyContent="center">
 

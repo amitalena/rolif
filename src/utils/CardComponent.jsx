@@ -60,7 +60,7 @@ const CardComponent = ({ id, imagePath, title, onClick }) => {
             <Box
                 sx={{
                     m: 2,
-                    height: { xs: "250px", sm: "250px", md: "250px", lg: '250px', xl: '250px' },
+                    height: { xs: "250px", sm: "250px", md: "250px", lg: '450px', xl: '450px' },
                     position: "relative",
                     overflow: "hidden",
                 }}
@@ -70,7 +70,6 @@ const CardComponent = ({ id, imagePath, title, onClick }) => {
                     ref={imageRef}
                     style={{
                         height: "100%",
-                        width: "100%",
                         backgroundImage: `url(${imagePath})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",

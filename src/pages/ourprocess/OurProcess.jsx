@@ -18,7 +18,7 @@ const OurProcess = () => {
         fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" }, // Responsive font size
     }), []);
     return (
-        <Box sx={{ py: 1, px: { xs: 2, md: 4, lg: 12 }, background: theme.palette.info.light }}>
+        <Box sx={{ py: 1, px: { xs: 2, md: 4, lg: 8 }, background: theme.palette.info.light }}>
             {/* Section Title */}
             <Typography {...titleStyles}>Our Working Process</Typography>
             <Divider sx={{ background: theme.palette.primary.main, height: 3, width: 150, mb: 4 }} />

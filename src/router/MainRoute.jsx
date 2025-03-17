@@ -3,8 +3,18 @@ import { lazy, Suspense } from "react";
 import PublicRoutes from './routes/PublicRoutes';
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Login from "../pages/Login";
-import SinglePageAll from "../pages/singlepages/SinglePageAll";
 import Gallery from "../pages/gallery/Gallery";
+import InteriorConstruction from "../pages/mainpage/InteriorOutFit";
+import ElectricService from "../pages/mainpage/Electricservice";
+import LightingSolutions from "../pages/mainpage/LightingSolutions";
+import SingleBeds from "../pages/furniture/beds/SingleBeds";
+import SingleTables from "../pages/furniture/tables/SingleTable";
+import SingleChairs from "../pages/furniture/chairs/SingleChairs";
+import SingleSofa from "../pages/furniture/sofas/SingleSofa";
+import FloorPage from "../pages/tiles/livingrooms/floors/FloorPage";
+import WallsPage from "../pages/tiles/livingrooms/walls/WallsPage";
+import BedroomWallPage from "../pages/tiles/bedrooms/walls/BedroomWallPage";
+import BedroomFloorPage from "../pages/tiles/bedrooms/floors/BedroomFloorPage";
 // Lazy-loaded components
 const Home = lazy(() => import("../pages/Home"));
 const AboutUs = lazy(() => import("../pages/aboutus/AboutUs"));
@@ -14,6 +24,8 @@ const SingleBlogPage = lazy(() => import("../pages/blogs/SingleBlog"));
 const SingleFurniture = lazy(() => import("../pages/furniture/SingleFurniture"));
 const SingleElectric = lazy(() => import("../pages/electric/SingleElectric"));
 const SingleTiles = lazy(() => import("../pages/tiles/SingleTiles"));
+const Civilcontruction = lazy(() => import("../pages/mainpage/Civilconstruction"));
+
 
 // Loading fallback component
 const Loading = () => <div>Loading...</div>;
@@ -28,9 +40,21 @@ const routes = [
     { path: "/singletiles/:id", element: <SingleTiles /> },
     { path: "/singleelectric/:id", element: <SingleElectric /> },
     { path: "/singleblog/:id", element: <SingleBlogPage /> },
-    { path: "/interior/bedroom/title", element: <SinglePageAll /> },
+    { path: "/furniture/beds", element: <SingleBeds /> },
+    { path: "/furniture/tables", element: <SingleTables /> },
+    { path: "/furniture/tables/:id", element: <SingleTables /> },
+    { path: "/furniture/chairs", element: <SingleChairs /> },
+    { path: "/furniture/sofa", element: <SingleSofa /> },
+    { path: "/tiles/livingroom/wall", element: <WallsPage /> },
+    { path: "/tiles/livingroom/floor", element: <FloorPage /> },
+    { path: "/tiles/bedroom/wall", element: <BedroomWallPage /> },
+    { path: "/tiles/bedroom/floor", element: <BedroomFloorPage /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/login", element: <Login /> },
+    { path: "/civilconstruction/:id", element: <Civilcontruction /> },
+    { path: "/interioroutfit/:id", element: <InteriorConstruction /> },
+    { path: "/electricalservice/:id", element: <ElectricService /> },
+    { path: "/lighting/:id", element: <LightingSolutions /> },
 ];
 
 // Create router

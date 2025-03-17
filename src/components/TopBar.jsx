@@ -46,7 +46,7 @@ const TopBar = () => {
         >
             <Box
                 sx={{
-                    px: { md: 2, lg: 12, xl: 12, xs: 1 },
+                    px: { md: 2, lg: 8, xl: 8, xs: 1 },
                     py: 1,
                     display: { lg: 'block', md: 'none', sm: 'none', xs: 'none' },
                     background: '#FFF',

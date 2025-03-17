@@ -1,4 +1,3 @@
-import { Toolbar } from "@mui/material"
 import Banner from "./banner/Banner"
 import FurniturePage from "./furniture/FurniturePage"
 import TilesPage from "./tiles/TilesPage"
@@ -10,12 +9,14 @@ import ParaEffect from "./services/ParaEffect"
 import WhyChooseUsN from "./chooseus/WhyChooseUsN"
 import OurProcess from "./ourprocess/OurProcess"
 import OurFeature from "./feature/OurFeature"
+import OurClient from './ourclients/OurClient';
+import MainPage from "./mainpage/MainPage"
 
 const Home = () => {
     return (
         <>
-            <Toolbar />
             <Banner />
+            <MainPage />
             <FurniturePage />
             <TilesPage />
             <ElectricPage />
@@ -25,6 +26,7 @@ const Home = () => {
             <ParaEffect />
             <OurProcess />
             <LatestBlog />
+            <OurClient />
             <OurTestimonial />
         </>
     )

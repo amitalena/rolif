@@ -1,5 +1,5 @@
 import { KeyboardDoubleArrowRight } from '@mui/icons-material';
-import { Box, Breadcrumbs, Stack, Toolbar, Typography, useTheme } from '@mui/material';
+import { Box, Breadcrumbs, Stack, Typography, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -15,10 +15,6 @@ const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, s
 
     return (
         <>
-            <Box sx={{ mt: { xl: 7, lg: 7, md: 0, sm: 0, xs: 0 } }}>
-                <Toolbar />
-            </Box>
-
             <Box
                 component={motion.div}
                 initial="hidden"
@@ -59,12 +55,26 @@ const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, s
                         direction="column"
                         sx={{
                             px: { xl: spacing(spacingConfig.lg), lg: spacing(spacingConfig.lg), md: spacing(spacingConfig.md), sm: spacing(spacingConfig.sm), xs: spacing(spacingConfig.xs) },
-                            py: { md: 15, xs: 12, xl: 20, lg: 25, sm: 12 },
+                            py: { md: 15, xs: 12, xl: 15, lg: 25, sm: 12 },
                             width: '100%',
-                            alignItems: 'left',
+                            alignItems: 'center',
                             justifyContent: 'center',
                         }}
                     >
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6 }}
+                            style={{ flexShrink: 0 }}
+                        >
+                            <Breadcrumbs separator={<KeyboardDoubleArrowRight sx={{ color: '#b71c1c' }} />} aria-label="breadcrumb">
+                                <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to="/">Home</Link>
+                                {/* <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to="/furniture/beds">Beds</Link> */}
+                                <Typography variant="body1" sx={{ fontWeight: 'bold', color: palette.info.light }}>
+                                    {text}
+                                </Typography>
+                            </Breadcrumbs>
+                        </motion.div>
                         <Typography
                             variant={titleVariant}
                             sx={{
@@ -75,20 +85,6 @@ const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, s
                         >
                             {title}
                         </Typography>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6 }}
-                            style={{ flexShrink: 0 }}
-                        >
-                            <Breadcrumbs separator={<KeyboardDoubleArrowRight sx={{ color: '#b71c1c' }} />} aria-label="breadcrumb">
-                                <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to="/">Home</Link>
-                                <Typography variant="body1" sx={{ fontWeight: 'bold', color: palette.info.light }}>
-                                    {text}
-                                </Typography>
-                            </Breadcrumbs>
-                        </motion.div>
                     </Stack>
                 </Box>
             </Box >

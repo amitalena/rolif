@@ -140,26 +140,26 @@ const AppTheme = createTheme({
         },
         h6: {
             fontWeight: 400,
-            fontSize: "1.0rem",
-            lineHeight: 1.6,
+            fontSize: "0.890rem",
+            lineHeight: 1.2,
             letterSpacing: "0.0075em",
-            textAlign: 'justify'
+            textAlign: 'left'
         },
         body1: {
             fontFamily: "Poppins",
-            fontWeight: '700',
+            fontWeight: 700,
             fontSize: "0.978rem",
-            lineHeight: 1.5,
+            lineHeight: 1.2,
             letterSpacing: "0.01038em",
-            textAlign: 'justify'
+            textAlign: 'left'
         },
         body2: {
             fontFamily: "Poppins",
-            fontWeight: 400,
-            fontSize: "0.796rem",
+            fontWeight: 100,
+            fontSize: "0.746rem",
             lineHeight: 1.43,
-            letterSpacing: "0.01071em",
-            textAlign: 'justify'
+            letterSpacing: "0.01971em",
+            textAlign: 'left'
 
         },
         subtitle1: {
@@ -167,28 +167,28 @@ const AppTheme = createTheme({
             fontSize: "1rem",
             lineHeight: 1.75,
             letterSpacing: "0.00938em",
-            textAlign: 'justify'
+            textAlign: 'left'
         },
         subtitle2: {
             fontWeight: 500,
             fontSize: "0.875rem",
             lineHeight: 1.57,
             letterSpacing: "0.00714em",
-            textAlign: 'justify'
+            textAlign: 'left'
         },
         button: {
-            fontWeight: 400,
+            fontWeight: 100,
             fontSize: "0.775rem",
             lineHeight: 1.45,
             letterSpacing: "0.02857em",
-            textTransform: "uppercase",
+            textTransform: "capitalize",
         },
         caption: {
             fontWeight: 400,
             fontSize: "0.75rem",
             lineHeight: 1.66,
             letterSpacing: "0.03333em",
-            textAlign: 'justify'
+            textAlign: 'left'
 
         },
         overline: {
@@ -197,7 +197,7 @@ const AppTheme = createTheme({
             lineHeight: 1.66,
             letterSpacing: "0.08333em",
             textTransform: "uppercase",
-            textAlign: 'justify'
+            textAlign: 'left'
         }
     },
     mixins: {

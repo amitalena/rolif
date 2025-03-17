@@ -1,19 +1,21 @@
-import Furniture1 from '../../assets/images/interior/f1.webp';
+import Furniture1 from '../../assets/images/interior/beds/sophiyaking.webp';
 import Furniture2 from '../../assets/images/interior/f2.webp';
 import Furniture3 from '../../assets/images/interior/f3.webp';
 import Furniture4 from '../../assets/images/interior/f4.webp';
 import Furniture5 from '../../assets/images/interior/f5.webp';
 import Furniture6 from '../../assets/images/interior/f6.webp';
-import Sub_F1 from '../../assets/images/interior/f7.webp'
-import Sub_F2 from '../../assets/images/interior/f8.webp'
-import Sub_F3 from '../../assets/images/interior/f9.webp'
-import Sub_F4 from '../../assets/images/interior/f10.webp'
+import Sub_F1 from '../../assets/images/interior/beds/sophiyaking.webp'
+import Sub_F2 from '../../assets/images/interior/beds/sophia2.webp'
+import Sub_F3 from '../../assets/images/interior/beds/sophia3.webp'
+import Sub_F4 from '../../assets/images/interior/beds/sophia4.webp'
+import Sub_F5 from '../../assets/images/interior/beds/sophia5.webp'
+import Sub_F6 from '../../assets/images/interior/beds/sophia6.webp'
 
 export const furnitureData = [
     {
         id: 1,
-        title: "Modern Sofa Set",
-        description: "A stylish and comfortable modern sofa set, perfect for contemporary living rooms.",
+        title: "Sophia King Size Bed With Hydraulic Storage",
+        description: "The Sophia King Size Bed with Hydraulic Storage offers regal elegance and convenience. Its lavish design and plush upholstery exude opulence. Beneath the mattress, a hydraulic storage system provides ample space for bedroom essentials, keeping your space organized and serene. Crafted with precision and top-quality materials, it’s a perfect blend of style and functionality.",
         imagePath: Furniture1,
         createDate: "12-02-2025",
         images: [
@@ -21,12 +23,14 @@ export const furnitureData = [
             { imagePath: Sub_F2 },
             { imagePath: Sub_F3 },
             { imagePath: Sub_F4 },
+            { imagePath: Sub_F5 },
+            { imagePath: Sub_F6 },
         ],
     },
     {
         id: 2,
-        title: "Wooden Dining Table",
-        description: "A sturdy wooden dining table with a classic finish, ideal for family gatherings.",
+        title: "Vanice King Size Bed With Hydraulic Storage",
+        description: "The Vanice King Size Bed with Hydraulic Storage combines luxury and practicality. Its elegant design and spacious sleeping surface offer the ultimate in comfort, while the integrated hydraulic storage provides ample space to keep your bedroom clutter-free. Elevate your sleeping experience and organization with this stylish and functional bed.",
         imagePath: Furniture2,
         createDate: "13-02-2025"
     },

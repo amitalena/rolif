@@ -66,7 +66,7 @@ const ParaEffect = () => {
                     background: "rgba(0,0,0,0.7)",
                 }}
             >
-                <Typography sx={{ py: { xl: 3, lg: 3, md: 3, xs: 2 }, px: { md: 5, sm: 5, lg: 12, xs: 2 } }} variant="h3" fontWeight="bold" color="info.main">
+                <Typography sx={{ py: { xl: 5, lg: 5, md: 3, xs: 2 }, px: { md: 5, sm: 5, lg: 8, xs: 2 } }} variant="h3" fontWeight="bold" color="info.main">
                     Want to know more about us?
                     <Divider
                         sx={{
@@ -81,10 +81,10 @@ const ParaEffect = () => {
                     spacing={3}
                     justifyContent="space-between"
                     alignItems="center"
-                    sx={{ px: { md: 5, sm: 5, lg: 12, xs: 2 }, py: 2 }}
+                    sx={{ px: { md: 5, sm: 5, lg: 8, xs: 2 }, py: 2 }}
                 >
                     {/* Left Section */}
-                    <Grid item xs={12} md={6} display="flex" justifyContent="center">
+                    <Grid item xs={12} md={6} display="flex">
                         <Box
                             component={motion.div}
                             initial={{ y: 20, opacity: 0 }}
@@ -130,7 +130,7 @@ const ParaEffect = () => {
                                     sx={{
                                         border: "2px solid #fff",
                                         height: "150px",
-                                        width: "250px",
+                                        width: "300px",
                                         display: "flex",
                                         flexDirection: "column",
                                         justifyContent: "center",

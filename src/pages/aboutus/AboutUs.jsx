@@ -1,13 +1,13 @@
 import { Box, Stack, Typography, useTheme, Grid, Toolbar, Divider, Paper } from '@mui/material';
 import Ab1 from '../../assets/images/banners/banner/About.png';
 import Banner from '../../utils/Banner';
-import OurTeam from '../teams/OurTeam';
+import OurNewTeam1 from '../teams/OurNewTeam1';
+import OurMission from './OurMission';
 
 const AboutUs = () => {
     const { spacing, palette } = useTheme();
     return (
         <>
-            <Toolbar />
             <Banner
                 title="About Us"
                 image={Ab1}
@@ -45,7 +45,10 @@ const AboutUs = () => {
                     </Grid>
                 </Grid>
             </Paper >
-            <OurTeam />
+            {/* our mission */}
+            <OurMission />
+            {/* <OurTeam /> */}
+            <OurNewTeam1 />
         </>
     );
 };

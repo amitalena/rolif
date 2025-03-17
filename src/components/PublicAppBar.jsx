@@ -60,7 +60,7 @@ const PublicAppBar = ({ isVisible }) => {
     return (
         <AppBar
             elevation={0}
-            position="fixed"
+            position={scrolling ? "fixed" : "sticky"}
             sx={{
                 width: '100%',
                 backdropFilter: scrolling ? 'blur(10px)' : 'blur(0px)',
@@ -70,8 +70,8 @@ const PublicAppBar = ({ isVisible }) => {
             }}
         >
             <TopBar isVisible={isVisible} />
-            <Toolbar>
-                <Box sx={{ display: 'flex', width: '100%', py: 1, px: { lg: 9, }, justifyContent: 'space-between', alignItems: 'center', }}>
+            <Toolbar disableGutters>
+                <Box sx={{ display: 'flex', width: '100%', px: { lg: 5, }, justifyContent: 'space-between', alignItems: 'center', }}>
                     {/* Logo & Desktop Menu */}
                     <Stack direction="row" alignItems="center">
                         <motion.div

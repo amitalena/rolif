@@ -19,22 +19,23 @@ const ElectricPage = ({ title }) => {
     const isSM = useMediaQuery(theme.breakpoints.up("sm"));
 
     // Determine `perPage` dynamically based on screen size
-    const perPage = useMemo(() => (isXL ? 4 : isLG ? 3 : isMD ? 2 : isSM ? 2 : 1), [isXL, isLG, isMD, isSM]);
+    const perPage = useMemo(() => (isXL ? 3 : isLG ? 3 : isMD ? 2 : isSM ? 2 : 1), [isXL, isLG, isMD, isSM]);
 
     // Memoized styles for performance optimization
     const containerStyles = useMemo(() => ({
         background: "#f1f1f1",
-        width: "100vw",
-        px: { lg: theme.spacing(11), md: theme.spacing(1), sm: theme.spacing(2), xs: theme.spacing(2) },
-        py: { md: 5, lg: 5, sm: 3, xs: 1 },
+        width: "99vw",
+        overflow: 'hidden',
+        px: { lg: theme.spacing(8), md: theme.spacing(1), sm: theme.spacing(2), xs: theme.spacing(2) },
+        py: { md: 4, lg: 4, sm: 3, xs: 1 },
     }), [theme]);
 
-    const tileStyles = useMemo(() => ({
+    const electricStyles = useMemo(() => ({
         variant: "h4",
         fontWeight: "bold",
+        color: "primary.main",
         py: 2,
         pl: 1,
-        fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" }, // Responsive font size
     }), []);
 
     // Optimized Splide settings
@@ -61,9 +62,10 @@ const ElectricPage = ({ title }) => {
     return (
         <Box sx={containerStyles}>
             {/* Header */}
-            <Box>
-                <Typography {...tileStyles}>{title}</Typography>
-                <Divider sx={{ background: theme.palette.primary.deep, ml: 1, height: '3px', width: '180px' }} />
+            <Box sx={{ pb: 2 }}>
+                <Typography variant="h4" fontWeight={'bold'}>Our <Typography component={'span'} {...electricStyles}>Electric Showroom</Typography>
+                    <Divider sx={{ background: theme.palette.primary.deep, height: '3px', width: '50px' }} />
+                </Typography>
             </Box>
 
             {/* Splide Slider */}
