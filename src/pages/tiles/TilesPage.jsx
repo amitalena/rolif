@@ -8,14 +8,14 @@ import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import CardComponent from "../../utils/CardComponent";
 
-import { livingroomWallData } from "./livingrooms/walls/livingroomWallData";
-import { bathroomfloorData } from "./bathrooms/floors/bathroomFloorData";
-import { bathroomwallData } from "./bathrooms/walls/bathroomWallData";
-import { kitchenFloorData } from "./kitchens/floors/kitchenFloorData";
-import { kitchenWallData } from "./kitchens/walls/kitchenWallData";
-import { bedroomFloorData } from "./bedrooms/floors/bedroomFloorData";
-import { bedroomWallData } from "./bedrooms/walls/bedroomWallData";
-import { livingroomFloorData } from "./livingrooms/floors/livingroomFloorData";
+import livingroomWallData from "./livingrooms/walls/livingroomWallData";
+import bathroomfloorData from "./bathrooms/floors/bathroomFloorData";
+import bathroomwallData from "./bathrooms/walls/bathroomWallData";
+import kitchenFloorData from "./kitchens/floors/kitchenFloorData";
+import kitchenWallData from "./kitchens/walls/kitchenWallData";
+import bedroomFloorData from "./bedrooms/floors/bedroomFloorData";
+import bedroomWallData from "./bedrooms/walls/bedroomWallData";
+import livingroomFloorData from "./livingrooms/floors/livingroomFloorData";
 
 
 const interleaveData = (arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8) => {
