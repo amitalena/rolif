@@ -3,7 +3,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material';
 
 const ProjectSection = ({ title, description, image, reverse }) => {
     return (
-        <Box sx={{ my: 2, px: 20 }}>
+        <Box sx={{ my: 2, px: { lg: 20, xl: 20, md: 2, sm: 2, xs: 2 } }}>
             <Grid container spacing={4} direction={reverse ? 'row-reverse' : 'row'}>
                 <Grid item xs={12} lg={7}>
                     <Stack spacing={2}>
