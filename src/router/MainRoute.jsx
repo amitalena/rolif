@@ -12,7 +12,7 @@ const SingleBlogPage = lazy(() => import("../pages/blogs/SingleBlog"));
 const SingleFurniture = lazy(() => import("../pages/furniture/SingleFurniture"));
 const SingleElectric = lazy(() => import("../pages/electric/SingleElectric"));
 const SingleTiles = lazy(() => import("../pages/tiles/SingleTiles"));
-const CivilConstructions = lazy(() => import("../pages/mainpage/CivilConstruction"));
+const CivilConstructions = lazy(() => import("../pages/mainpage/Civilconstruction"));
 const InteriorConstruction = lazy(() => import("../pages/mainpage/InteriorOutFit"));
 const ElectricalService = lazy(() => import("../pages/mainpage/ElectricalService"));
 const LightingSolutions = lazy(() => import("../pages/mainpage/LightingSolutions"));

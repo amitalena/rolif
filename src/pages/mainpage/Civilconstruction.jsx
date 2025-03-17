@@ -4,7 +4,7 @@ import Civil2 from '../../assets/images/civil/civil2.webp';
 import { civilData, } from './mainPageData';
 import ProjectSection from './ProjectSection';
 
-const CivilConstruction = () => {
+const Civilconstruction = () => {
     const theme = useTheme();
 
     return (
@@ -48,4 +48,4 @@ const CivilConstruction = () => {
     );
 };
 
-export default CivilConstruction;
+export default Civilconstruction;
