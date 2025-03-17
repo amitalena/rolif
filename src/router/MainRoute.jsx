@@ -12,7 +12,7 @@ const SingleBlogPage = lazy(() => import("../pages/blogs/SingleBlog"));
 const SingleFurniture = lazy(() => import("../pages/furniture/SingleFurniture"));
 const SingleElectric = lazy(() => import("../pages/electric/SingleElectric"));
 const SingleTiles = lazy(() => import("../pages/tiles/SingleTiles"));
-const CivilConstruction = lazy(() => import("../pages/mainpage/CivilConstruction"));
+const CivilConstructions = lazy(() => import("../pages/mainpage/CivilConstruction"));
 const InteriorConstruction = lazy(() => import("../pages/mainpage/InteriorOutFit"));
 const ElectricalService = lazy(() => import("../pages/mainpage/ElectricalService"));
 const LightingSolutions = lazy(() => import("../pages/mainpage/LightingSolutions"));
@@ -51,7 +51,7 @@ const routes = [
     { path: "/tiles/bedroom/floor", element: <BedroomFloorPage /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/login", element: <Login /> },
-    { path: "/civilconstruction/:id", element: <CivilConstruction /> },
+    { path: "/civilconstruction/:id", element: <CivilConstructions /> },
     { path: "/interioroutfit/:id", element: <InteriorConstruction /> },
     { path: "/electricalservice/:id", element: <ElectricalService /> },
     { path: "/lighting/:id", element: <LightingSolutions /> },
