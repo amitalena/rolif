@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import CardComponent from "../../utils/CardComponent";
 
 import { livingroomWallData } from "./livingrooms/walls/livingroomWallData";
-import { bathroomfloorData } from "./bathrooms/floors/bathroomfloorData";
+import { bathroomfloorData } from "./bathrooms/floors/bathroomFloorData";
 import { bathroomwallData } from "./bathrooms/walls/bathroomWallData";
 import { kitchenFloorData } from "./kitchens/floors/kitchenFloorData";
 import { kitchenWallData } from "./kitchens/walls/kitchenWallData";

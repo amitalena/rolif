@@ -12,7 +12,7 @@ import C2 from '../../../../assets/images/tiles/walls/clone2.jpg'
 import A0 from '../../../../assets/images/tiles/walls/alightaquahl0.jpg'
 import A1 from '../../../../assets/images/tiles/walls/alght1.jpg'
 
-export const bathroomwallData = [
+export const bathroomWallData = [
     {
         id: 7,
         title: "Sierra Grey HL 01",
