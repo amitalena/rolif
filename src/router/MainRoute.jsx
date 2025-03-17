@@ -5,7 +5,7 @@ import PrivateRoutes from "./routes/PrivateRoutes";
 import Login from "../pages/Login";
 import Gallery from "../pages/gallery/Gallery";
 import InteriorConstruction from "../pages/mainpage/InteriorOutFit";
-import ElectricService from "../pages/mainpage/Electricservice";
+// import ElectricService from "../pages/mainpage/Electricservice";
 import LightingSolutions from "../pages/mainpage/LightingSolutions";
 import SingleBeds from "../pages/furniture/beds/SingleBeds";
 import SingleTables from "../pages/furniture/tables/SingleTable";
@@ -53,7 +53,7 @@ const routes = [
     { path: "/login", element: <Login /> },
     { path: "/civilconstruction/:id", element: <Civilcontruction /> },
     { path: "/interioroutfit/:id", element: <InteriorConstruction /> },
-    { path: "/electricalservice/:id", element: <ElectricService /> },
+    // { path: "/electricalservice/:id", element: <ElectricService /> },
     { path: "/lighting/:id", element: <LightingSolutions /> },
 ];
 

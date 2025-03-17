@@ -7,7 +7,7 @@ import { format, parseISO, isValid } from "date-fns";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import Banner from "./Banner";
-import S1 from '../assets/images/banners/singleBanner.webp';
+import S1 from '../assets/images/banners/banner/blog.png';
 
 const BlogComponent = ({ blog, latestBlogs }) => {
     const { palette } = useTheme();
