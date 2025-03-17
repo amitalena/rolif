@@ -1,20 +1,8 @@
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import PublicRoutes from './routes/PublicRoutes';
+import PublicRoutes from "./routes/PublicRoutes";
 import PrivateRoutes from "./routes/PrivateRoutes";
-import Login from "../pages/Login";
-import Gallery from "../pages/gallery/Gallery";
-import InteriorConstruction from "../pages/mainpage/InteriorOutFit";
-import LightingSolutions from "../pages/mainpage/LightingSolutions";
-import SingleBeds from "../pages/furniture/beds/SingleBeds";
-import SingleTables from "../pages/furniture/tables/SingleTable";
-import SingleChairs from "../pages/furniture/chairs/SingleChairs";
-import SingleSofa from "../pages/furniture/sofas/SingleSofa";
-import FloorPage from "../pages/tiles/livingrooms/floors/FloorPage";
-import WallsPage from "../pages/tiles/livingrooms/walls/WallsPage";
-import BedroomWallPage from "../pages/tiles/bedrooms/walls/BedroomWallPage";
-import BedroomFloorPage from "../pages/tiles/bedrooms/floors/BedroomFloorPage";
-import ElectricService from "../pages/mainpage/Electricservice";
+
 // Lazy-loaded components
 const Home = lazy(() => import("../pages/Home"));
 const AboutUs = lazy(() => import("../pages/aboutus/AboutUs"));
@@ -24,8 +12,20 @@ const SingleBlogPage = lazy(() => import("../pages/blogs/SingleBlog"));
 const SingleFurniture = lazy(() => import("../pages/furniture/SingleFurniture"));
 const SingleElectric = lazy(() => import("../pages/electric/SingleElectric"));
 const SingleTiles = lazy(() => import("../pages/tiles/SingleTiles"));
-const Civilcontruction = lazy(() => import("../pages/mainpage/Civilconstruction"));
-
+const CivilConstruction = lazy(() => import("../pages/mainpage/Civilconstruction"));
+const InteriorConstruction = lazy(() => import("../pages/mainpage/InteriorOutFit"));
+const LightingSolutions = lazy(() => import("../pages/mainpage/LightingSolutions"));
+const SingleBeds = lazy(() => import("../pages/furniture/beds/SingleBeds"));
+const SingleTables = lazy(() => import("../pages/furniture/tables/SingleTable"));
+const SingleChairs = lazy(() => import("../pages/furniture/chairs/SingleChairs"));
+const SingleSofa = lazy(() => import("../pages/furniture/sofas/SingleSofa"));
+const FloorPage = lazy(() => import("../pages/tiles/livingrooms/floors/FloorPage"));
+const WallsPage = lazy(() => import("../pages/tiles/livingrooms/walls/WallsPage"));
+const BedroomWallPage = lazy(() => import("../pages/tiles/bedrooms/walls/BedroomWallPage"));
+const BedroomFloorPage = lazy(() => import("../pages/tiles/bedrooms/floors/BedroomFloorPage"));
+const ElectricService = lazy(() => import("../pages/mainpage/Electricservice"));
+const Gallery = lazy(() => import("../pages/gallery/Gallery"));
+const Login = lazy(() => import("../pages/Login"));
 
 // Loading fallback component
 const Loading = () => <div>Loading...</div>;
@@ -51,7 +51,7 @@ const routes = [
     { path: "/tiles/bedroom/floor", element: <BedroomFloorPage /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/login", element: <Login /> },
-    { path: "/civilconstruction/:id", element: <Civilcontruction /> },
+    { path: "/civilconstruction/:id", element: <CivilConstruction /> },
     { path: "/interioroutfit/:id", element: <InteriorConstruction /> },
     { path: "/electricalservice/:id", element: <ElectricService /> },
     { path: "/lighting/:id", element: <LightingSolutions /> },
@@ -72,9 +72,6 @@ const routers = createBrowserRouter([
     {
         path: "/admin",
         element: <PrivateRoutes />,
-        // children: [
-        //     { path: "/", element: <Dashboard /> }
-        // ]
     }
 ]);
 
