@@ -14,6 +14,7 @@ const SingleElectric = lazy(() => import("../pages/electric/SingleElectric"));
 const SingleTiles = lazy(() => import("../pages/tiles/SingleTiles"));
 const CivilConstruction = lazy(() => import("../pages/mainpage/Civilconstruction"));
 const InteriorConstruction = lazy(() => import("../pages/mainpage/InteriorOutFit"));
+const ElectricService = lazy(() => import("../pages/mainpage/Electricservice"));
 const LightingSolutions = lazy(() => import("../pages/mainpage/LightingSolutions"));
 const SingleBeds = lazy(() => import("../pages/furniture/beds/SingleBeds"));
 const SingleTables = lazy(() => import("../pages/furniture/tables/SingleTable"));
@@ -23,7 +24,6 @@ const FloorPage = lazy(() => import("../pages/tiles/livingrooms/floors/FloorPage
 const WallsPage = lazy(() => import("../pages/tiles/livingrooms/walls/WallsPage"));
 const BedroomWallPage = lazy(() => import("../pages/tiles/bedrooms/walls/BedroomWallPage"));
 const BedroomFloorPage = lazy(() => import("../pages/tiles/bedrooms/floors/BedroomFloorPage"));
-const ElectricService = lazy(() => import("../pages/mainpage/Electricservice"));
 const Gallery = lazy(() => import("../pages/gallery/Gallery"));
 const Login = lazy(() => import("../pages/Login"));
 
