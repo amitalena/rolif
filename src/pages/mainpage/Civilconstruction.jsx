@@ -1,5 +1,5 @@
 import { Box, Divider, Typography, useTheme } from '@mui/material';
-import Banner from './../../utils/Banner';
+import Banner from '../../utils/Banner';
 import Civil2 from '../../assets/images/civil/civil2.webp';
 import { civilData, } from './mainPageData';
 import ProjectSection from './ProjectSection';

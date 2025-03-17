@@ -4,7 +4,7 @@ import Civil2 from '../../assets/images/civil/civil2.webp';
 import { electricalServicesData, } from './mainPageData';
 import ProjectSection from './ProjectSection';
 
-const Electricservice = () => {
+const ElectricService = () => {
     const theme = useTheme();
 
     return (
@@ -48,4 +48,4 @@ const Electricservice = () => {
     );
 };
 
-export default Electricservice;
+export default ElectricService;
