@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Box, Divider, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";

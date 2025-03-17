@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
+
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Box, Button, Card, CardContent, Divider, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, Stack, Typography, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { mainPageData } from "./mainPageData";
 

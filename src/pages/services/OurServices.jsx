@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import T1 from '../../assets/images/tiles/t6.webp';
 import F1 from '../../assets/images/interior/f4.webp';
 import E1 from '../../assets/images/electric/e6.webp';
-import { FiberManualRecord } from '@mui/icons-material';
 
 const OurServices = () => {
     const { spacing, palette } = useTheme();
