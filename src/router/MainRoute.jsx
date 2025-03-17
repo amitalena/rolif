@@ -5,7 +5,6 @@ import PrivateRoutes from "./routes/PrivateRoutes";
 import Login from "../pages/Login";
 import Gallery from "../pages/gallery/Gallery";
 import InteriorConstruction from "../pages/mainpage/InteriorOutFit";
-import ElectricService from "../pages/mainpage/Electricservice";
 import LightingSolutions from "../pages/mainpage/LightingSolutions";
 import SingleBeds from "../pages/furniture/beds/SingleBeds";
 import SingleTables from "../pages/furniture/tables/SingleTable";
@@ -15,6 +14,7 @@ import FloorPage from "../pages/tiles/livingrooms/floors/FloorPage";
 import WallsPage from "../pages/tiles/livingrooms/walls/WallsPage";
 import BedroomWallPage from "../pages/tiles/bedrooms/walls/BedroomWallPage";
 import BedroomFloorPage from "../pages/tiles/bedrooms/floors/BedroomFloorPage";
+import ElectricService from "../pages/mainpage/Electricservice";
 // Lazy-loaded components
 const Home = lazy(() => import("../pages/Home"));
 const AboutUs = lazy(() => import("../pages/aboutus/AboutUs"));

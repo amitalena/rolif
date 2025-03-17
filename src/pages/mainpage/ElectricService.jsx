@@ -1,7 +1,7 @@
 import { Box, Divider, Typography, useTheme } from '@mui/material';
 import Banner from '../../utils/Banner';
 import Civil2 from '../../assets/images/civil/civil2.webp';
-import { electricalServicesData, interiorData, } from './mainPageData';
+import { electricalServicesData, } from './mainPageData';
 import ProjectSection from './ProjectSection';
 
 const ElectricService = () => {
