@@ -7,15 +7,14 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import CardComponent from "../../utils/CardComponent";
-
-import livingroomWallData from "./livingrooms/walls/livingroomWallData";
-import bathroomfloorData from "./bathrooms/floors/bathroomFloorData";
-import bathroomwallData from "./bathrooms/walls/bathroomWallData";
-import kitchenFloorData from "./kitchens/floors/kitchenFloorData";
-import kitchenWallData from "./kitchens/walls/kitchenWallData";
-import bedroomFloorData from "./bedrooms/floors/bedroomFloorData";
-import bedroomWallData from "./bedrooms/walls/bedroomWallData";
-import livingroomFloorData from "./livingrooms/floors/livingroomFloorData";
+import { livingroomFloorData } from "./livingrooms/floors/livingroomFloorData";
+import { livingroomWallData } from "./livingrooms/walls/livingroomWallData";
+import { bathroomfloorData } from './bathrooms/floors/bathroomFloorData';
+import { bathroomWallData } from './bathrooms/walls/bathroomWallData';
+import { kitchenFloorData } from './kitchens/floors/kitchenFloorData';
+import { kitchenWallData } from './kitchens/walls/kitchenWallData';
+import { bedroomFloorData } from "./bedrooms/floors/bedroomFloorData";
+import { bedroomWallData } from "./bedrooms/walls/bedroomWallData";
 
 
 const interleaveData = (arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8) => {
@@ -37,7 +36,7 @@ const interleaveData = (arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8) => {
 };
 
 // Merge data in alternating order
-const allSlides = interleaveData(livingroomFloorData, livingroomWallData, bathroomfloorData, bathroomwallData, kitchenFloorData, kitchenWallData, bedroomFloorData, bedroomWallData);
+const allSlides = interleaveData(livingroomFloorData, livingroomWallData, bathroomfloorData, bathroomWallData, kitchenFloorData, kitchenWallData, bedroomFloorData, bedroomWallData);
 
 const TilesPage = ({ title }) => {
     const theme = useTheme();
