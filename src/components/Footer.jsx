@@ -131,7 +131,7 @@ const Footer = () => {
                     <Grid container spacing={1}>
                         {galleryData.slice(1, 7).map(({ imagePath, name, route }, index) => (
                             <Grid
-                                item xs={12} lg={6}
+                                item xs={4} lg={6}
                                 key={index}
                                 onClick={() => navigate(route)}
                                 sx={{ cursor: "pointer", "&:hover": { opacity: 0.8 } }}

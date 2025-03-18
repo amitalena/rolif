@@ -96,7 +96,7 @@ const TilesViewComponent = React.memo(({ view }) => {
             </Box>
             <Box sx={{ my: 2, px: { lg: 12, md: 2, sm: 2, xs: 2 } }}>
                 <Grid container spacing={3}>
-                    <Grid item xs={9} xl={6} md={10} lg={6}>
+                    <Grid item xs={12} xl={6} md={10} lg={6}>
                         <Stack direction="row" spacing={2}>
                             <Card
                                 elevation={0}
