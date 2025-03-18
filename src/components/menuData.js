@@ -48,10 +48,16 @@ export const menuData = [
         subMenu: [
             { name: "Wiring & Cables", route: "/electrics/wire&cable" },
             { name: "Lighting Installation", route: "/electrics/lightingsolution" },
-            { name: "Switches & Sockets", route: "/electrics/switche$socket" },
+            { name: "Switches & Sockets", route: "/electrics/switch_socket" },
         ],
     },
-    { name: "Our Project", route: "/projects" },
+    // {
+    //     name: "Our Services",
+    //     subMenu: [
+    //         { name: "Interior & Fit-Out Works", route: "/interior" },
+    //         { name: "Electrical Services", route: "/electrical" },
+    //     ]
+    // },
     { name: "Gallery", route: "/gallery" },
     { name: "Blogs", route: "/blogs" },
     { name: "Contact Us", route: "/contactus" },

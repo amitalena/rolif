@@ -70,7 +70,7 @@ const PublicAppBar = ({ isVisible }) => {
             }}
         >
             <TopBar isVisible={isVisible} />
-            <Toolbar disableGutters>
+            <Toolbar >
                 <Box sx={{ display: 'flex', width: '100%', px: { lg: 5, }, justifyContent: 'space-between', alignItems: 'center', }}>
                     {/* Logo & Desktop Menu */}
                     <Stack direction="row" alignItems="center">
@@ -99,6 +99,7 @@ const PublicAppBar = ({ isVisible }) => {
 
                         <IconButton
                             variant='none'
+                            size='large'
                             sx={{
                                 display: { xl: "none", lg: "none", md: "flex", sm: 'flex', xs: 'flex' }, // Hidden on sm & below
                                 cursor: "pointer",

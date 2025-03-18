@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material/styles';
-import "@fontsource/poppins";
+import "@fontsource/lato";
+import "@fontsource/lato/400.css";
+import "@fontsource/lato/400-italic.css";
 
 const AppTheme = createTheme({
     breakpoints: {
@@ -105,23 +107,23 @@ const AppTheme = createTheme({
         borderRadius: 0
     },
     typography: {
-        fontFamily: 'Poppins',
+        fontFamily: 'Lato',
         fontSize: 25,
         htmlFontSize: 30,
         h1: {
-            fontWeight: 700,
+            fontWeight: 900,
             fontSize: "6rem",
             lineHeight: 1.167,
             letterSpacing: "-0.01562em"
         },
         h2: {
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: "3.75rem",
             lineHeight: 1.2,
             letterSpacing: "-0.00833em"
         },
         h3: {
-            fontWeight: 400,
+            fontWeight: 500,
             fontSize: "3rem",
             lineHeight: 1.167,
             letterSpacing: "0em"
@@ -139,14 +141,14 @@ const AppTheme = createTheme({
             letterSpacing: "0em"
         },
         h6: {
-            fontWeight: 400,
+            fontWeight: 200,
             fontSize: "0.890rem",
             lineHeight: 1.2,
             letterSpacing: "0.0075em",
             textAlign: 'left'
         },
         body1: {
-            fontFamily: "Poppins",
+            fontFamily: "Lato",
             fontWeight: 700,
             fontSize: "0.978rem",
             lineHeight: 1.2,
@@ -154,9 +156,9 @@ const AppTheme = createTheme({
             textAlign: 'left'
         },
         body2: {
-            fontFamily: "Poppins",
-            fontWeight: 100,
-            fontSize: "0.746rem",
+            fontFamily: "Lato",
+            fontWeight: 200,
+            fontSize: "0.816rem",
             lineHeight: 1.43,
             letterSpacing: "0.01971em",
             textAlign: 'left'
@@ -177,8 +179,8 @@ const AppTheme = createTheme({
             textAlign: 'left'
         },
         button: {
-            fontWeight: 100,
-            fontSize: "0.775rem",
+            fontWeight: 900,
+            fontSize: "0.875rem",
             lineHeight: 1.45,
             letterSpacing: "0.02857em",
             textTransform: "capitalize",

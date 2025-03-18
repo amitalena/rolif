@@ -2,27 +2,25 @@ import React from "react";
 import { Box, Grid, Card, CardContent, Typography, Stack, IconButton, Button } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { electricData, tilesData } from "./bannerData";
+import { interiorData, tilesData } from "./bannerData";
 import { useMediaQuery } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import { bedData } from "../furniture/beds/bedData";
 
 // Function to interleave arrays in the desired order
-const interleaveData = (arr1, arr2, arr3) => {
+const interleaveData = (arr1, arr2) => {
     const result = [];
-    const maxLength = Math.max(arr1.length, arr2.length, arr3.length);
+    const maxLength = Math.max(arr1.length, arr2.length);
 
     for (let i = 0; i < maxLength; i++) {
         if (arr1[i]) result.push(arr1[i]); // Add furniture data
         if (arr2[i]) result.push(arr2[i]); // Add tiles data
-        if (arr3[i]) result.push(arr3[i]); // Add electric data
     }
 
     return result;
 };
 
 // Merge data in alternating order
-const allSlides = interleaveData(bedData, tilesData, electricData);
+const allSlides = interleaveData(interiorData, tilesData);
 
 const Banner = () => {
     const isXs = useMediaQuery((theme) => theme.breakpoints.down("sm")); // Check if screen is xs (small)
@@ -67,7 +65,7 @@ const Banner = () => {
                             <SplideSlide key={i}>
                                 <Card elevation={0}>
                                     {/* Card Media (Image) */}
-                                    <Box sx={{ position: "relative", width: "100%", height: { xl: "82vh", md: "70vh", sm: "70vh", xs: "45vh" } }}>
+                                    <Box sx={{ position: "relative", width: "100%", height: { xl: "82vh", md: "70vh", sm: "70vh", xs: "50vh" } }}>
                                         <Box
                                             sx={{
                                                 height: '100%',
@@ -105,20 +103,21 @@ const Banner = () => {
                                     <CardContent
                                         sx={{
                                             position: "absolute",
-                                            top: { xs: 0, sm: "10%", md: "20%", lg: "15%", xl: "15%" },
-                                            left: { xs: 0, sm: 0, md: "10%", lg: "10%" },
+                                            top: { xs: "10%", sm: "10%", md: "20%", lg: "15%", xl: "15%" },
+                                            left: { xs: "5%", sm: 0, md: "10%", lg: "10%" },
                                             backgroundColor: "rgba(0,0,0,0.7)",
                                             color: "white",
-                                            height: { md: "350px", sm: "80vh", xs: "100%" },
-                                            width: { md: "450px", lg: "500px", xl: "500px", xs: "100%" },
+                                            height: { md: "350px", sm: "80vh", xs: "70%" },
+                                            width: { md: "450px", lg: "500px", xl: "500px", xs: "90%" },
                                             p: 4,
                                         }}
                                     >
                                         <Stack spacing={2} direction="column" justifyContent="space-between">
-                                            <Typography variant="h5" textAlign="left" color="primary" fontWeight="bold" sx={{ fontSize: { md: "30px", xs: "30px" } }}>
+                                            <Typography variant="h2" sx={{
+                                                fontSize: { xs: "2.1rem", sm: "3.25rem" }
+                                            }} textAlign="left" color="info" fontWeight="bold">
                                                 {item.title}
                                             </Typography>
-                                            <Typography variant="body2"> {item.description?.split(" ").slice(0, 25).join(" ")}...</Typography>
                                             <Box>
                                                 <Button variant="outlined" sx={{ mt: 2 }}>
                                                     View Details

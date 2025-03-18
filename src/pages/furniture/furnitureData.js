@@ -13,7 +13,7 @@ import Sub_F6 from '../../assets/images/interior/beds/sophia6.webp'
 
 export const furnitureData = [
     {
-        id: 1,
+        id: 13,
         title: "Sophia King Size Bed With Hydraulic Storage",
         description: "The Sophia King Size Bed with Hydraulic Storage offers regal elegance and convenience. Its lavish design and plush upholstery exude opulence. Beneath the mattress, a hydraulic storage system provides ample space for bedroom essentials, keeping your space organized and serene. Crafted with precision and top-quality materials, it’s a perfect blend of style and functionality.",
         imagePath: Furniture1,
@@ -28,35 +28,35 @@ export const furnitureData = [
         ],
     },
     {
-        id: 2,
+        id: 14,
         title: "Vanice King Size Bed With Hydraulic Storage",
         description: "The Vanice King Size Bed with Hydraulic Storage combines luxury and practicality. Its elegant design and spacious sleeping surface offer the ultimate in comfort, while the integrated hydraulic storage provides ample space to keep your bedroom clutter-free. Elevate your sleeping experience and organization with this stylish and functional bed.",
         imagePath: Furniture2,
         createDate: "13-02-2025"
     },
     {
-        id: 3,
+        id: 15,
         title: "Luxury King-Size Bed",
         description: "An elegant king-size bed with a plush headboard for a luxurious sleeping experience.",
         imagePath: Furniture3,
         createDate: "14-02-2025"
     },
     {
-        id: 4,
+        id: 16,
         title: "Minimalist TV Stand",
         description: "A sleek and modern TV stand with ample storage space for media essentials.",
         imagePath: Furniture4,
         createDate: "15-02-2025"
     },
     {
-        id: 5,
+        id: 17,
         title: "Ergonomic Office Chair",
         description: "A high-quality ergonomic office chair designed for maximum comfort and support.",
         imagePath: Furniture5,
         createDate: "16-02-2025"
     },
     {
-        id: 6,
+        id: 18,
         title: "Contemporary Coffee Table",
         description: "A stylish coffee table with a modern design, perfect for any living room setup.",
         imagePath: Furniture6,

@@ -24,11 +24,16 @@ const FloorPage = lazy(() => import("../pages/tiles/livingrooms/floors/FloorPage
 const WallsPage = lazy(() => import("../pages/tiles/livingrooms/walls/WallsPage"));
 const BedroomWallPage = lazy(() => import("../pages/tiles/bedrooms/walls/BedroomWallPage"));
 const BedroomFloorPage = lazy(() => import("../pages/tiles/bedrooms/floors/BedroomFloorPage"));
+const BathroomWallPage = lazy(() => import("../pages/tiles/bathrooms/walls/BathroomWallPage"));
+const BathroomFloorPage = lazy(() => import("../pages/tiles/bathrooms/floors/BathroomFloorPage"));
+const KitchenWallPage = lazy(() => import("../pages/tiles/kitchens/walls/KitchenWallPage"));
+const KitchenFloorPage = lazy(() => import("../pages/tiles/kitchens/floors/KitchenFloorPage"));
+const SwitchPage = lazy(() => import("../pages/electric/switches/SwitchPage"));
 const Gallery = lazy(() => import("../pages/gallery/Gallery"));
 const Login = lazy(() => import("../pages/Login"));
 
 // Loading fallback component
-const Loading = () => <div>Loading...</div>;
+const Loading = () => <div style={{ textAlign: 'center' }}>Loading...</div>;
 
 // Define routes
 const routes = [
@@ -49,6 +54,11 @@ const routes = [
     { path: "/tiles/livingroom/floor", element: <FloorPage /> },
     { path: "/tiles/bedroom/wall", element: <BedroomWallPage /> },
     { path: "/tiles/bedroom/floor", element: <BedroomFloorPage /> },
+    { path: "/tiles/bathroom/wall", element: <BathroomWallPage /> },
+    { path: "/tiles/bathroom/floor", element: <BathroomFloorPage /> },
+    { path: "/tiles/kitchen/wall", element: <KitchenWallPage /> },
+    { path: "/tiles/kitchen/floor", element: <KitchenFloorPage /> },
+    { path: "/electrics/switch_socket", element: <SwitchPage /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/login", element: <Login /> },
     { path: "/civilconstruction/:id", element: <CivilConstructions /> },

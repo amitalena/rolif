@@ -21,9 +21,9 @@ const OurFeature = () => {
 
     return (
         <Box sx={{ py: 4, px: { xs: 2, md: 2, lg: 8, xl: 8 }, background: theme.palette.info.main }}>
-            <Typography variant="h3" fontWeight="bold" color="info.deep" mb={3}>
+            <Typography variant="h4" fontWeight="bold" color="info.deep" mb={3}>
                 Our Feature
-                <Divider sx={{ background: theme.palette.primary.deep, height: 3, width: 100 }} />
+                <Divider sx={{ background: theme.palette.primary.deep, height: 3, width: 80 }} />
             </Typography>
 
             <Grid container spacing={2}>

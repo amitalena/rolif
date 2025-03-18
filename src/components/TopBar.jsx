@@ -48,7 +48,7 @@ const TopBar = () => {
                 sx={{
                     px: { md: 2, lg: 8, xl: 8, xs: 1 },
                     py: 1,
-                    display: { lg: 'block', md: 'none', sm: 'none', xs: 'none' },
+                    display: { lg: 'block', md: 'block', sm: 'block', xs: 'block' },
                     background: '#FFF',
                     color: '#333'
                 }}
@@ -67,7 +67,7 @@ const TopBar = () => {
                         <Logo />
                     </Box>
                     {/* search bar */}
-                    <Stack spacing={1} direction={'row'} sx={{ alignItems: 'center', display: { md: 'flex', xs: 'block' }, }}>
+                    <Stack spacing={1} direction={'row'} sx={{ alignItems: 'center', display: { md: 'flex', xs: 'none' }, }}>
                         <Box sx={{ display: 'flex', border: '1px solid #111', alignItems: 'center', overflow: 'hidden' }}>
                             <OutlinedInput
                                 fullWidth
@@ -100,16 +100,18 @@ const TopBar = () => {
                         <Stack direction="row" spacing={1} alignItems={'center'}>
                             <MailOutline sx={{ fontSize: '40px', color: '#9e9e9e' }} />
                             <Box>
-                                <Typography variant="body2">Email Us</Typography>
-                                <Typography variant="body2">rolif12@gmail.com</Typography>
+                                <Typography variant="body1">Email Us</Typography>
+                                <Typography variant="body2">info@rolifindia.com</Typography>
+                                <Typography variant="body2">www.rolifindia.com</Typography>
                             </Box>
                             <Divider sx={{ background: '#e9e9e9', height: '50px', width: '0px', display: { md: 'block', xs: 'none' } }} orientation='vertical' />
                         </Stack>
                         <Stack direction="row" spacing={1} alignItems={'center'}>
                             <PhoneAndroidOutlined sx={{ fontSize: '40px', color: '#9e9e9e' }} />
                             <Box>
-                                <Typography variant="body2">CALL US NOW FOR</Typography>
-                                <Typography variant="h6" fontWeight={'bold'}>+91-0123456789</Typography>
+                                <Typography variant="body1">CALL US NOW FOR</Typography>
+                                <Typography variant="body2" >91+ 8802262626</Typography>
+                                <Typography variant="body2">+91 120 4148686</Typography>
                             </Box>
                         </Stack>
                     </Box>

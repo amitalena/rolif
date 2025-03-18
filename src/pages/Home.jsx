@@ -2,7 +2,7 @@ import Banner from "./banner/Banner"
 import FurniturePage from "./furniture/FurniturePage"
 import TilesPage from "./tiles/TilesPage"
 import ElectricPage from "./electric/ElectricPage"
-import OurServices from "./services/OurServices"
+// import OurServices from "./services/OurServices"
 import LatestBlog from "./blogs/LatesBlog"
 import OurTestimonial from "./testimonial/OurTestimonial"
 import ParaEffect from "./services/ParaEffect"
@@ -11,6 +11,7 @@ import OurProcess from "./ourprocess/OurProcess"
 import OurFeature from "./feature/OurFeature"
 import OurClient from './ourclients/OurClient';
 import MainPage from "./mainpage/MainPage"
+import ServiceDo from "./services/ServiceDo"
 
 const Home = () => {
     return (
@@ -21,7 +22,8 @@ const Home = () => {
             <TilesPage />
             <ElectricPage />
             <WhyChooseUsN />
-            <OurServices />
+            <ServiceDo />
+            {/* <OurServices /> */}
             <OurFeature />
             <ParaEffect />
             <OurProcess />

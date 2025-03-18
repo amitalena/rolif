@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Box, Divider, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -5,8 +6,23 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { electricData } from "./electricData";
 import CardComponent from "../../utils/CardComponent";
+import { switchData } from "./switches/switchData";
+import { fansData } from "./fans/fansData";
+
+const interleaveData = (arr1, arr2) => {
+    const result = [];
+    const maxLength = Math.max(arr1.length, arr2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        if (arr1[i]) result.push(arr1[i]);
+        if (arr2[i]) result.push(arr2[i]);
+    }
+
+    return result;
+};
+
+const allSlides = interleaveData(switchData, fansData);
 
 const ElectricPage = ({ title }) => {
     const theme = useTheme();
@@ -51,7 +67,7 @@ const ElectricPage = ({ title }) => {
 
     // Handle click event for tile items
     const handleTilePageClick = (id, title) => {
-        const selectedTile = electricData.find((item) => item.id === id);
+        const selectedTile = allSlides.find((item) => item.id === id);
         if (selectedTile) {
             localStorage.setItem("Electric", JSON.stringify(selectedTile)); // Use "Tile" key
             const modifiedTitle = title.replace(/ /g, "_");
@@ -70,7 +86,7 @@ const ElectricPage = ({ title }) => {
 
             {/* Splide Slider */}
             <Splide options={sliderOptions}>
-                {electricData.map((item) => (
+                {allSlides.map((item) => (
                     <SplideSlide key={item.id} style={{ display: "flex", justifyContent: "center" }}>
                         <CardComponent
                             id={item.id}

@@ -16,7 +16,7 @@ import L0 from '../../../../assets/images/tiles/walls/Lithor0.jpg'
 import L1 from '../../../../assets/images/tiles/walls/lithordark1.jpg'
 import L2 from '../../../../assets/images/tiles/walls/lither2.jpg'
 
-export const bathroomfloorData = [
+export const bathroomFloorData = [
     {
         id: 1,
         title: "Ridge Moka",

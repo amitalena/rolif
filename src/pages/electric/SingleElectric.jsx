@@ -1,6 +1,21 @@
 import React, { useEffect, useState } from "react";
-import ViewComponent from "../../utils/ViewComponent";
-import { electricData } from './electricData';
+import { switchData } from "./switches/switchData";
+import { fansData } from "./fans/fansData";
+import ElectricViewComponent from "./ElectricViewComponent";
+
+const interleaveData = (arr1, arr2) => {
+    const result = [];
+    const maxLength = Math.max(arr1.length, arr2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        if (arr1[i]) result.push(arr1[i]);
+        if (arr2[i]) result.push(arr2[i]);
+    }
+
+    return result;
+};
+
+const allSlides = interleaveData(switchData, fansData);
 
 const SingleTiles = () => {
     const [mainTile, setMainTile] = useState(null);
@@ -8,7 +23,7 @@ const SingleTiles = () => {
 
     useEffect(() => {
         // Retrieve the saved tile data from localStorage
-        const savedTile = localStorage.getItem("Tile");
+        const savedTile = localStorage.getItem("Electric");
 
         if (savedTile) {
             // Parse the data back to an object
@@ -18,14 +33,14 @@ const SingleTiles = () => {
             setMainTile(parsedTile);
 
             // Set the latest tiles (all other tile items except the selected one)
-            const filteredLatestTiles = electricData.filter(
+            const filteredLatestTiles = allSlides.filter(
                 (item) => item.id !== parsedTile.id
             );
             setLatestTiles(filteredLatestTiles);
         } else {
             // If no data is found in localStorage, fallback to default data
-            const defaultMainTile = electricData.find((tile) => tile.id === 1);
-            const defaultLatestTiles = electricData.filter((tile) => tile.id !== 1);
+            const defaultMainTile = allSlides.find((tile) => tile.id === 1);
+            const defaultLatestTiles = allSlides.filter((tile) => tile.id !== 1);
 
             setMainTile(defaultMainTile);
             setLatestTiles(defaultLatestTiles);
@@ -37,7 +52,7 @@ const SingleTiles = () => {
     }
 
     return (
-        <ViewComponent
+        <ElectricViewComponent
             view={mainTile}
             latestBlogs={latestTiles}
         />

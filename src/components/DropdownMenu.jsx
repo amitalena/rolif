@@ -12,7 +12,7 @@ const DropdownContent = styled(motion.div)({
     backgroundColor: "rgba(0,0,0,0.8)",
     color: "#222",
     zIndex: 10,
-    minWidth: "170px",
+    minWidth: "200px",
 });
 const StyledButton = styled('div')(({ active }) => ({
     textTransform: "none",
