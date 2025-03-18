@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import TilesViewComponent from "./TilesViewComponent";
-import { livingroomFloorData } from "./livingrooms/floors/livingroomFloorData";
-import { livingroomWallData } from "./livingrooms/walls/livingroomWallData";
-import { bathroomfloorData } from "./bathrooms/floors/bathroomFloorData";
-import { bathroomWallData } from "./bathrooms/walls/bathroomWallData";
-import { kitchenFloorData } from "./kitchens/floors/kitchenFloorData";
-import { kitchenWallData } from "./kitchens/walls/kitchenWallData";
-import { bedroomFloorData } from "./bedrooms/floors/bedroomFloorData";
-import { bedroomWallData } from "./bedrooms/walls/bedroomWallData";
+import { livingroomFloorData } from './livingrooms/floors/livingroomFloorData';
+import { livingroomWallData } from './livingrooms/walls/livingroomWallData';
+import { bathroomFloorData } from './bathrooms/floors/bathroomFloorData';
+import { bathroomWallData } from './bathrooms/walls/bathroomWallData';
+import { kitchenFloorData } from './kitchens/floors/kitchenFloorData';
+import { kitchenWallData } from './kitchens/walls/kitchenWallData';
+import { bedroomFloorData } from './bedrooms/floors/bedroomFloorData';
+import { bedroomWallData } from './bedrooms/walls/bedroomWallData';
 
 
 const interleaveData = (arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8) => {
@@ -29,7 +29,7 @@ const interleaveData = (arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8) => {
 };
 
 // Merge data in alternating order
-const allSlides = interleaveData(livingroomFloorData, livingroomWallData, bathroomfloorData, bathroomWallData, kitchenFloorData, kitchenWallData, bedroomFloorData, bedroomWallData);
+const allSlides = interleaveData(livingroomFloorData, livingroomWallData, bathroomFloorData, bathroomWallData, kitchenFloorData, kitchenWallData, bedroomFloorData, bedroomWallData);
 
 const SingleTiles = () => {
     const [mainTile, setMainTile] = useState(null);
