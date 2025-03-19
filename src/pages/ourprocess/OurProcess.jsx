@@ -29,7 +29,7 @@ const OurProcess = () => {
             <Grid container justifyContent="center" >
                 {processData.map((card) => (
                     <Grid item xs={12} sm={6} md={6} lg={4} xl={3} key={card.id}>
-                        <Card elevation={3} sx={{
+                        <Card elevation={0} sx={{
                             height: "320px",
                             position: "relative",
                             background: card.backgroundColor,

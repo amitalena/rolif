@@ -51,13 +51,13 @@ export const menuData = [
             { name: "Switches & Sockets", route: "/electrics/switch_socket" },
         ],
     },
-    // {
-    //     name: "Our Services",
-    //     subMenu: [
-    //         { name: "Interior & Fit-Out Works", route: "/interior" },
-    //         { name: "Electrical Services", route: "/electrical" },
-    //     ]
-    // },
+    {
+        name: "Our Services",
+        subMenu: [
+            { name: "Interior & Fit-Out Works", route: "/service/interior-out-fit" },
+            { name: "Electrical Services", route: "/service/electrical-services" },
+        ]
+    },
     { name: "Gallery", route: "/gallery" },
     { name: "Blogs", route: "/blogs" },
     { name: "Contact Us", route: "/contactus" },

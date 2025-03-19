@@ -5,7 +5,7 @@ import { Box, Typography, Grid, Divider, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Ab1 from "../../assets/images/civil/civil2.webp";
 import ServiceCard from "./ServiceCard";
-import { interiorServiceData } from "./serviceData";
+import { servicesData } from "./servicesData";
 
 const ServiceDo = () => {
     const theme = useTheme();
@@ -16,7 +16,7 @@ const ServiceDo = () => {
     }, []);
 
     const handleClick = (id) => {
-        const selectedTiles = interiorServiceData.find((item) => item.id === id);
+        const selectedTiles = servicesData.find((item) => item.id === id);
         if (selectedTiles) {
             localStorage.setItem("Tiles", JSON.stringify(selectedTiles));
             navigate(`/interior/${id}`);
@@ -61,10 +61,10 @@ const ServiceDo = () => {
                     data-aos="fade-up"
                 />
                 <Grid container spacing={2}>
-                    {interiorServiceData.map((view) => (
+                    {servicesData.map((view) => (
                         <Grid
                             key={view.id}
-                            item xs={12} sm={6} md={6} lg={3} xl={3}
+                            item xs={12} sm={6} md={6} lg={4} xl={4}
                             data-aos="zoom-in"
                         >
                             <ServiceCard

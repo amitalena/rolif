@@ -29,6 +29,8 @@ const BathroomFloorPage = lazy(() => import("../pages/tiles/bathrooms/floors/Bat
 const KitchenWallPage = lazy(() => import("../pages/tiles/kitchens/walls/KitchenWallPage"));
 const KitchenFloorPage = lazy(() => import("../pages/tiles/kitchens/floors/KitchenFloorPage"));
 const SwitchPage = lazy(() => import("../pages/electric/switches/SwitchPage"));
+const InteriorOutFit = lazy(() => import("../pages/services/interior/InteriorOutFit"));
+const ElectricService = lazy(() => import("../pages/services/electric/ElectricService"));
 const Gallery = lazy(() => import("../pages/gallery/Gallery"));
 const Login = lazy(() => import("../pages/Login"));
 
@@ -63,6 +65,8 @@ const routes = [
     { path: "/login", element: <Login /> },
     { path: "/civilconstruction/:id", element: <CivilConstructions /> },
     { path: "/interioroutfit/:id", element: <InteriorConstruction /> },
+    { path: "/service/interior-out-fit", element: <InteriorOutFit /> },
+    { path: "/service/electrical-services", element: <ElectricService /> },
     { path: "/electricalservice/:id", element: <ElectricalService /> },
     { path: "/lighting/:id", element: <LightingSolutions /> },
 ];

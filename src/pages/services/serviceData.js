@@ -1,7 +1,7 @@
 import T1 from '../../assets/images/interior/f6.webp';
 import C1 from '../../assets/images/interior/f8.webp';
-import H1 from '../../assets/images/interior/hospitalize.avif';
-import P1 from '../../assets/images/interior/plum.avif';
+import H1 from '../../assets/images/interior/interiorimg/hospitality.avif';
+import P1 from '../../assets/images/interior/interiorimg/plum.avif';
 import R1 from '../../assets/images/interior/f7.webp';
 export const interiorServiceData = [
     {
