@@ -1,9 +1,9 @@
 import { useState, useCallback } from "react";
 import Banner from "../../utils/Banner";
-import { Box, Grid, Stack, Pagination, useTheme, Toolbar } from "@mui/material";
+import { Box, Grid, Stack, Pagination, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import Ab1 from '../../assets/images/banners/blog.png';
+import Ab1 from '../../assets/images/banners/banner/blog.avif';
 import { blogData } from "./blogData";
 import BlogCard from "../../utils/BlogCard";
 
@@ -17,8 +17,13 @@ const Blogs = () => {
     const paginatedData = blogData.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
     // Memoized Click Handler
-    const handleClick = useCallback((id) => {
-        navigate(`/singleblog/${id}`);
+    const handleClick = useCallback((id, title) => {
+        const selectedBlog = blogData.find((item) => item.id === id);
+        if (selectedBlog) {
+            localStorage.setItem("latestBlog", JSON.stringify(selectedBlog));
+            const modifiedTitle = title.replace(/ /g, "_");
+            navigate(`/singleblog/${id}?view=${modifiedTitle}`);
+        }
     }, [navigate]);
 
     // Pagination Handler
@@ -44,7 +49,7 @@ const Blogs = () => {
                 <Grid container spacing={2}>
                     {paginatedData.slice(0, 6).map((blog) => (
                         <Grid key={blog.id} item xs={12} sm={6} md={6} lg={4}>
-                            <BlogCard blog={blog} handleClick={handleClick} />
+                            <BlogCard blog={blog} handleClick={() => handleClick(blog.id, blog.title)} />
                         </Grid>
                     ))}
                 </Grid>

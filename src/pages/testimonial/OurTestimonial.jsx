@@ -17,11 +17,11 @@ const OurTestimonial = () => {
 
     // Memoized styles
     const containerStyles = useMemo(() => ({
-        background: "#dfdfdf",
+        background: "#f1f2f9",
         overflow: "hidden",
         width: "99vw",
         px: { lg: 8, md: 2, sm: 2, xs: 2 },
-        py: { md: 5, lg: 5, sm: 3, xs: 1 },
+        py: { md: 3, lg: 3, sm: 3, xs: 1 },
     }), []);
 
     // Memoized Splide settings
@@ -39,7 +39,7 @@ const OurTestimonial = () => {
         <Box sx={containerStyles}>
             {/* Header */}
             <Box mb={2}>
-                <Typography variant="h4" fontWeight="bold" sx={{ py: 2, pl: 1, fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" } }}>
+                <Typography variant="h4" fontWeight="bold" sx={{ py: 2, pl: 1, fontSize: { xs: "1.2rem", sm: "1.25rem", md: "1.45rem" } }}>
                     Testimonials
                 </Typography>
                 <Divider sx={{ background: theme.palette.primary.deep, ml: 1, height: "3px", width: "180px" }} />

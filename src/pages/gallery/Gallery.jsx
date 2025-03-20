@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import CloseIcon from "@mui/icons-material/Close";
-import G1 from "../../assets/images/banners/processinterior.webp";
+import G1 from "../../assets/images/banners/banner/overlay.avif";
 
 import { galleryData } from "./galleryData";
 import Banner from "../../utils/Banner";

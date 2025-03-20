@@ -15,11 +15,12 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #E96300;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #E96300;
 }
 
 body {
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #E96300;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +62,46 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Customize left and right arrow buttons */
+.splide__arrow {
+  background-color: #ff6d00 !important;
+  /* Change to your preferred color */
+  width: 20px;
+  height: 20px;
+  border-radius: '50px';
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.splide__arrow:hover {
+  background-color: #E96300 !important;
+  /* Darker shade on hover */
+}
+
+/* Left arrow */
+.splide__arrow--prev {
+  left: -50px;
+}
+
+/* Right arrow */
+.splide__arrow--next {
+  right: -50px;
+}
+
+/* Customize arrow icons */
+.splide__arrow svg {
+  fill: white !important;
+  /* Change arrow icon color */
+  width: 15px;
+  height: 15px;
 }

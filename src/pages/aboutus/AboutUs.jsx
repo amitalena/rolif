@@ -1,8 +1,11 @@
-import { Box, Stack, Typography, useTheme, Grid, Toolbar, Divider, Paper } from '@mui/material';
-import Ab1 from '../../assets/images/banners/banner/About.png';
+import { Box, Stack, Typography, useTheme, Grid, Divider, Paper } from '@mui/material';
+import Ab1 from '../../assets/images/banners/banner/aboutbanner.avif';
+import Ab2 from '../../assets/images/banners/banner/values.avif';
 import Banner from '../../utils/Banner';
 import OurNewTeam1 from '../teams/OurNewTeam1';
 import OurMission from './OurMission';
+import OurVision from './OurVision';
+import SafetyInfo from './SafetyInfo';
 
 const AboutUs = () => {
     const { spacing, palette } = useTheme();
@@ -13,7 +16,7 @@ const AboutUs = () => {
                 image={Ab1}
                 height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '55vh', xl: '50vh' }}
                 titleVariant="h2"
-                overlayColor="rgba(30,57,81,0.2)"
+                overlayColor="rgba(30,57,81,0.4)"
                 spacingConfig={{ lg: 12, md: 2, xs: 1 }}
                 containerStyles={{ overflow: "hidden" }}
                 text="About Us"
@@ -22,11 +25,11 @@ const AboutUs = () => {
                 {/* Info Section */}
                 <Grid container spacing={5} >
                     {/* Grid 1 - Animate from left */}
-                    <Grid item md={7} xs={12} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                    <Grid item md={12} lg={7} xs={12} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                         <Box elevation={0}>
-                            <Typography variant="h3" sx={{ mb: '10px' }}>
-                                About Us
-                                <Divider sx={{ background: palette.primary.deep, height: '3px', width: '150px' }} />
+                            <Typography variant="h4" sx={{ mb: '10px' }}>
+                                About <Typography component={'span'} variant="h4" color="primary">Us</Typography>
+                                <Divider sx={{ background: palette.primary.deep, height: '3px', width: '70px' }} />
                             </Typography>
                             <Stack spacing={1}>
                                 <Typography variant='body2' >The Company ROLIF INDIA PVT. LTD. started business services in 2013 as Lighting Solutions. Later, the company became an EPC electrical contracting company. This division plays a pivotal role in the project execution of the other service divisions.</Typography>
@@ -40,13 +43,15 @@ const AboutUs = () => {
                     </Grid>
 
                     {/* Grid 2 - Animate from right */}
-                    <Grid item md={5} xs={12} initial="hidden" whileInView="visible" viewport={{ once: true }} >
-                        <Box component="img" src={Ab1} sx={{ width: '100%', height: '40vh' }} alt={Ab1} />
+                    <Grid item md={12} lg={5} xs={12} initial="hidden" whileInView="visible" viewport={{ once: true }} >
+                        <Box component="img" src={Ab2} sx={{ width: '100%', height: '45vh' }} alt={Ab2} />
                     </Grid>
                 </Grid>
             </Paper >
             {/* our mission */}
+            <OurVision />
             <OurMission />
+            <SafetyInfo />
             {/* <OurTeam /> */}
             <OurNewTeam1 />
         </>

@@ -11,6 +11,8 @@ import OurProcess from "./ourprocess/OurProcess"
 import OurFeature from "./feature/OurFeature"
 import OurClient from './ourclients/OurClient';
 import MainPage from "./mainpage/MainPage"
+import OurMission from "./aboutus/OurMission"
+import OurProject from "./projects/OurProject"
 // import ServiceDo from "./services/ServiceDo"
 
 const Home = () => {
@@ -27,7 +29,9 @@ const Home = () => {
             <OurFeature />
             <ParaEffect />
             <OurProcess />
+            <OurMission />
             <LatestBlog />
+            <OurProject />
             <OurClient />
             <OurTestimonial />
         </>

@@ -7,7 +7,7 @@ const SingleBlog = () => {
     const [latestBlogs, setLatestBlogs] = useState([]);
     useEffect(() => {
         // Retrieve the saved furniture data from localStorage
-        const savedFurniture = localStorage.getItem("latestblog");
+        const savedFurniture = localStorage.getItem("latestBlog");
 
         if (savedFurniture) {
             // Parse the data back to an object

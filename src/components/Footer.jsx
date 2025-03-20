@@ -39,13 +39,14 @@ const Footer = () => {
     return (
         <Box
             sx={{
+                position: 'relative',
                 background: theme.palette.info.deep,
                 color: theme.palette.info.dark,
                 py: 4,
                 px: { xs: 2, lg: 9 },
             }}
         >
-            <Grid container spacing={4} justifyContent="center">
+            <Grid container spacing={2} justifyContent="center">
                 {/* About Section */}
                 <Grid item xs={12} sm={6} md={6} lg={2.5}>
                     <Stack spacing={2}>
@@ -80,7 +81,7 @@ const Footer = () => {
                 </Grid>
 
                 {/* Contact Info */}
-                <Grid item xs={12} sm={6} md={6} lg={3}>
+                <Grid item xs={12} sm={6} md={6} lg={2.5}>
                     <Typography variant="h6" color="primary" fontWeight="bold" textTransform="uppercase" mb={1}>
                         Contact Info
                     </Typography>
@@ -96,7 +97,7 @@ const Footer = () => {
                 </Grid>
 
                 {/* Newsletter Subscription */}
-                <Grid item xs={12} sm={6} md={6} lg={3}>
+                <Grid item xs={12} sm={6} md={6} lg={2.5}>
                     <Typography variant="h6" color="primary" fontWeight="bold" textTransform="uppercase" mb={1}>
                         Stay Updated
                     </Typography>
@@ -123,7 +124,7 @@ const Footer = () => {
                 </Grid>
 
                 {/* Product Gallery */}
-                <Grid item xs={12} sm={6} md={3} lg={2}>
+                <Grid item xs={12} sm={6} md={3} lg={3}>
                     <Typography variant="h6" color="primary" fontWeight="bold" textTransform="uppercase" mb={1}>
                         Products Gallery
                     </Typography>
@@ -131,7 +132,7 @@ const Footer = () => {
                     <Grid container spacing={1}>
                         {galleryData.slice(1, 7).map(({ imagePath, name, route }, index) => (
                             <Grid
-                                item xs={4} lg={6}
+                                item xs={4} lg={4}
                                 key={index}
                                 onClick={() => navigate(route)}
                                 sx={{ cursor: "pointer", "&:hover": { opacity: 0.8 } }}

@@ -59,7 +59,7 @@ const CardComponent = ({ id, imagePath, title, onClick }) => {
             {/* Image Container */}
             <Box
                 sx={{
-                    m: 2,
+                    p: 4,
                     height: { xs: "250px", sm: "250px", md: "250px", lg: '450px', xl: '450px' },
                     position: "relative",
                     overflow: "hidden",

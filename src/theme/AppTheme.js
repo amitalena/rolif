@@ -142,7 +142,7 @@ const AppTheme = createTheme({
         },
         h6: {
             fontWeight: 200,
-            fontSize: "0.890rem",
+            fontSize: "1.25rem",
             lineHeight: 1.2,
             letterSpacing: "0.0075em",
             textAlign: 'left'
@@ -157,7 +157,7 @@ const AppTheme = createTheme({
         },
         body2: {
             fontFamily: "Lato",
-            fontWeight: 200,
+            fontWeight: 400,
             fontSize: "0.816rem",
             lineHeight: 1.43,
             letterSpacing: "0.01971em",
