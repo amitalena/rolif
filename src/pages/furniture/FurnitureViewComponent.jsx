@@ -77,14 +77,14 @@ const FurnitureViewComponent = React.memo(({ view }) => {
     return (
         <>
             <Banner
-                title="Bedroom"
+                links="furniture"
                 image={S1}
                 height={{ sm: "35vh", md: "45vh", xs: "40vh", lg: "55vh", xl: "50vh" }}
                 titleVariant="h2"
                 overlayColor="rgba(30,57,81,0.2)"
                 spacingConfig={{ xl: 12, lg: 12, md: 2, xs: 1 }}
                 containerStyles={{ overflow: "hidden" }}
-                text="Furniture"
+                text={view.title}
             />
             <Box sx={{ p: 1, px: { lg: 12, md: 2, sm: 2, xs: 2 }, background: "#eee" }}>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} style={{ flexShrink: 0 }}>

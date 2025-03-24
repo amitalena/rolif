@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Card, CardContent, Typography, Paper, Divider, useTheme, Box } from "@mui/material";

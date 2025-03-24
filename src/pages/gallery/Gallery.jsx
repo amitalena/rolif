@@ -82,9 +82,9 @@ const Gallery = () => {
     return (
         <>
             <Banner
-                title="Our Gallery"
+                links="gallery"
                 image={G1}
-                height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '55vh', xl: '50vh' }}
+                height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '40vh', xl: '40vh' }}
                 titleVariant="h2"
                 overlayColor="rgba(30,57,81,0.7)"
                 spacingConfig={{ lg: 12, md: 2, xs: 1 }}

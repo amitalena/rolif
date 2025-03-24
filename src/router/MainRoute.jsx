@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import PublicRoutes from "./routes/PublicRoutes";
 import PrivateRoutes from "./routes/PrivateRoutes";
 
+
 // Lazy-loaded components
 const Home = lazy(() => import("../pages/Home"));
 const AboutUs = lazy(() => import("../pages/aboutus/AboutUs"));
@@ -20,6 +21,10 @@ const SingleBeds = lazy(() => import("../pages/furniture/beds/SingleBeds"));
 const SingleTables = lazy(() => import("../pages/furniture/tables/SingleTable"));
 const SingleChairs = lazy(() => import("../pages/furniture/chairs/SingleChairs"));
 const SingleSofa = lazy(() => import("../pages/furniture/sofas/SingleSofa"));
+const LivingPage = lazy(() => import("../pages/tiles/livingrooms/LivingPage"));
+const BedroomPage = lazy(() => import("../pages/tiles/bedrooms/BedroomPage"));
+const KitchenPage = lazy(() => import("../pages/tiles/kitchens/KitchenPage"));
+const BathroomPage = lazy(() => import("../pages/tiles/bathrooms/BathroomPage"));
 const FloorPage = lazy(() => import("../pages/tiles/livingrooms/floors/FloorPage"));
 const WallsPage = lazy(() => import("../pages/tiles/livingrooms/walls/WallsPage"));
 const BedroomWallPage = lazy(() => import("../pages/tiles/bedrooms/walls/BedroomWallPage"));
@@ -33,6 +38,7 @@ const ProjectPage = lazy(() => import("../pages/projects/OurProject"));
 const InteriorOutFit = lazy(() => import("../pages/services/interior/InteriorOutFit"));
 const ElectricService = lazy(() => import("../pages/services/electric/ElectricService"));
 const Gallery = lazy(() => import("../pages/gallery/Gallery"));
+const CareerPage = lazy(() => import("../pages/careers/Career"));
 const Login = lazy(() => import("../pages/Login"));
 
 // Loading fallback component
@@ -41,8 +47,8 @@ const Loading = () => <div style={{ textAlign: 'center' }}>Loading...</div>;
 // Define routes
 const routes = [
     { path: "/", element: <Home />, index: true },
-    { path: "/aboutus", element: <AboutUs /> },
-    { path: "/contactus", element: <ContactUs /> },
+    { path: "/about-us", element: <AboutUs /> },
+    { path: "/contact-us", element: <ContactUs /> },
     { path: "/blogs", element: <Blogs /> },
     { path: "/singlefurniture/:id", element: <SingleFurniture /> },
     { path: "/singletiles/:id", element: <SingleTiles /> },
@@ -53,6 +59,10 @@ const routes = [
     { path: "/furniture/tables/:id", element: <SingleTables /> },
     { path: "/furniture/chairs", element: <SingleChairs /> },
     { path: "/furniture/sofa", element: <SingleSofa /> },
+    { path: "/tiles/livingroom", element: <LivingPage /> },
+    { path: "/tiles/bathroom", element: <BathroomPage /> },
+    { path: "/tiles/kitchen", element: <KitchenPage /> },
+    { path: "/tiles/bedroom", element: <BedroomPage /> },
     { path: "/tiles/livingroom/wall", element: <WallsPage /> },
     { path: "/tiles/livingroom/floor", element: <FloorPage /> },
     { path: "/tiles/bedroom/wall", element: <BedroomWallPage /> },
@@ -64,6 +74,7 @@ const routes = [
     { path: "/electrics/switch_socket", element: <SwitchPage /> },
     { path: "/project", element: <ProjectPage /> },
     { path: "/gallery", element: <Gallery /> },
+    { path: "/career", element: <CareerPage /> },
     { path: "/login", element: <Login /> },
     { path: "/civilconstruction/:id", element: <CivilConstructions /> },
     { path: "/interioroutfit/:id", element: <InteriorConstruction /> },

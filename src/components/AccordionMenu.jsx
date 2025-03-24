@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Remove, Add } from "@mui/icons-material";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Logo from "../assets/images/logo/rolif.png";
 import { menuData } from "./menuData";
@@ -9,6 +9,7 @@ import { menuData } from "./menuData";
 
 // eslint-disable-next-line react/prop-types
 const AccordionMenu = ({ onClose }) => {
+    const theme = useTheme();
     const [openMenus, setOpenMenus] = useState(false);
     const navigate = useNavigate();
 
@@ -66,7 +67,7 @@ const AccordionMenu = ({ onClose }) => {
 
                 {/* Submenu Items */}
                 {menu.subMenu && openMenus[index] && (
-                    <Box sx={{ width: "100%", pl: 2 }} onClick={() => {
+                    <Box sx={{ width: "100%", pl: 1 }} onClick={() => {
                         handleNavigation(menu.subMenu.route); // Navigate if no subMenu
                     }}>
                         {menu.subMenu.map((subMenu, subIndex) =>
@@ -75,7 +76,6 @@ const AccordionMenu = ({ onClose }) => {
                     </Box>
                 )}
             </Box>
-            <Divider sx={{ backgroundColor: "#ddd" }} />
         </Box>
     );
 
@@ -84,6 +84,7 @@ const AccordionMenu = ({ onClose }) => {
             sx={{
                 width: "100%",
                 display: "flex",
+
                 flexDirection: "column",
                 height: "100%",
             }}
@@ -96,22 +97,21 @@ const AccordionMenu = ({ onClose }) => {
                     alignItems: "center",
                     justifyContent: "space-between",
                     px: 2,
-                    py: 1,
                     borderBottom: "1px solid #ddd",
                 }}
             >
                 {/* Logo */}
-                <Box>
+                <Box sx={{ m: 1, height: '50px' }}>
                     <img
                         src={Logo}
                         alt="Logo"
-                        style={{ height: "50px", width: "auto" }}
+                        style={{ height: "100%", width: "auto" }}
                     />
                 </Box>
             </Box>
 
             {/* Menu Items */}
-            <Box sx={{ flexGrow: 1, overflowY: "auto", pt: 1 }}>
+            <Box sx={{ flexGrow: 1, background: theme.palette.primary.main, overflowY: "auto", }}>
                 {menuData.map((menu, index) => renderMenu(menu, index))}
             </Box>
         </Box>

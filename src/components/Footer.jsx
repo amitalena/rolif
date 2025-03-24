@@ -15,10 +15,10 @@ import Rolif_img from "../assets/images/logo/rolif.png";
 import { galleryData } from "../pages/gallery/galleryData";
 
 const aboutLinks = [
-    { name: "About Us", route: "/aboutus" },
+    { name: "About Us", route: "/about-us" },
     { name: "Blogs", route: "/blogs" },
-    { name: "Our Service", route: "/services" },
-    { name: "Contact Us", route: "/contactus" },
+    // { name: "Our Service", route: "/services" },
+    { name: "Contact Us", route: "/contact-us" },
 ];
 
 const Footer = () => {
@@ -85,14 +85,17 @@ const Footer = () => {
                     <Typography variant="h6" color="primary" fontWeight="bold" textTransform="uppercase" mb={1}>
                         Contact Info
                     </Typography>
-                    <Typography>
-                        <strong>Address:</strong> Shop no 36, B1A, First Floor, Sector 51 Noida 201301, Landmark: Near IDBI Bank
+                    <Typography variant="body2">
+                        <strong>Address:</strong> Contracting Business Solutions A-158, Alpha-1, Greater Noida Uttar Pradesh - 201308 INDIA
                     </Typography>
-                    <Typography>
-                        <strong>Email:</strong> info@soundville.in
+                    <Typography variant="body2">
+                        <strong>Email1:</strong> info@rolifindia.com,
                     </Typography>
-                    <Typography>
-                        <strong>Phone:</strong> +91-9870287980
+                    <Typography variant="body2">
+                        <strong>Mobile:</strong> +91-8802262626
+                    </Typography>
+                    <Typography variant="body2">
+                        <strong>Phone:</strong> +91 1204148686
                     </Typography>
                 </Grid>
 

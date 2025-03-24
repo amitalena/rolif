@@ -111,37 +111,37 @@ const AppTheme = createTheme({
         fontSize: 25,
         htmlFontSize: 30,
         h1: {
-            fontWeight: 900,
+            // fontWeight: 900,
             fontSize: "6rem",
             lineHeight: 1.167,
             letterSpacing: "-0.01562em"
         },
         h2: {
-            fontWeight: 700,
+            // fontWeight: 700,
             fontSize: "3.75rem",
             lineHeight: 1.2,
             letterSpacing: "-0.00833em"
         },
         h3: {
-            fontWeight: 500,
+            // fontWeight: 500,
             fontSize: "3rem",
             lineHeight: 1.167,
             letterSpacing: "0em"
         },
         h4: {
-            fontWeight: 300,
+            // fontWeight: 300,
             fontSize: "1.650rem",
             lineHeight: 1.235,
             letterSpacing: "0.00735em"
         },
         h5: {
-            fontWeight: 400,
+            // fontWeight: 400,
             fontSize: "1.2rem",
             lineHeight: 1.334,
             letterSpacing: "0em"
         },
         h6: {
-            fontWeight: 200,
+            // fontWeight: 200,
             fontSize: "1.25rem",
             lineHeight: 1.2,
             letterSpacing: "0.0075em",
@@ -149,7 +149,7 @@ const AppTheme = createTheme({
         },
         body1: {
             fontFamily: "Lato",
-            fontWeight: 700,
+            // fontWeight: 700,
             fontSize: "0.978rem",
             lineHeight: 1.2,
             letterSpacing: "0.01038em",
@@ -157,7 +157,7 @@ const AppTheme = createTheme({
         },
         body2: {
             fontFamily: "Lato",
-            fontWeight: 400,
+            // fontWeight: 400,
             fontSize: "0.816rem",
             lineHeight: 1.43,
             letterSpacing: "0.01971em",
@@ -165,7 +165,7 @@ const AppTheme = createTheme({
 
         },
         subtitle1: {
-            fontWeight: 400,
+            // fontWeight: 400,
             fontSize: "1rem",
             lineHeight: 1.75,
             letterSpacing: "0.00938em",

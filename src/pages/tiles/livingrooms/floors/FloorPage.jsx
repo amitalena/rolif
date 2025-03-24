@@ -9,18 +9,19 @@ import CardSingle from '../../../furniture/beds/CardSingle';
 const FloorPage = () => {
     const theme = useTheme();
     const navigate = useNavigate();
-    const handleClick = (id) => {
+    const handleClick = (id, title) => {
         const selectedFurniture = livingroomFloorData.find((item) => item.id === id);
         if (selectedFurniture) {
             // Save new furniture item in localStorage, replacing previous one
             localStorage.setItem("Tiles", JSON.stringify(selectedFurniture));
-            navigate(`/singletiles/${id}`);
+            const modifiedTitle = title.replace(/ /g, "_");
+            navigate(`/singletiles/${id}?view=${modifiedTitle}`);
         }
     };
     return (
         <>
             <Banner
-                title="Floor"
+                links="floor"
                 image={S1}
                 height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '40vh', xl: '40vh' }}
                 titleVariant="h2"
@@ -33,7 +34,7 @@ const FloorPage = () => {
                 <Grid container spacing={2}>
                     {livingroomFloorData?.map((view) => (
                         <Grid key={view.id} item xs={12} sm={6} md={6} lg={3} xl={3}>
-                            <CardSingle view={view} handleClick={handleClick} />
+                            <CardSingle view={view} handleClick={() => handleClick(view?.id, view?.title)} />
                         </Grid>
                     ))}
                 </Grid>

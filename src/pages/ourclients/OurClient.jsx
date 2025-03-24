@@ -47,11 +47,11 @@ const OurClient = () => {
         <Splide options={getSplideOptions(speed)} extensions={{ AutoScroll }}>
             {data.map((item) => (
                 <SplideSlide key={item.id}>
-                    <Box sx={{ height: '90px', width: "100%", m: 1 }}>
+                    <Box sx={{ height: '85px', width: "100%", m: 1 }}>
                         <img
                             src={item.image}
                             alt={`Client ${item.id}`}
-                            style={{ borderRadius: 5, height: "100%", width: "95%", }}
+                            style={{ borderRadius: 5, height: "100%", width: "90%", }}
                         />
                     </Box>
                 </SplideSlide>

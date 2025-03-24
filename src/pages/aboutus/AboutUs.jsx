@@ -12,7 +12,7 @@ const AboutUs = () => {
     return (
         <>
             <Banner
-                title="About Us"
+                links="about-us"
                 image={Ab1}
                 height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '55vh', xl: '50vh' }}
                 titleVariant="h2"

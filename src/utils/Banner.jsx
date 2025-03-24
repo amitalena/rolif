@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, spacingConfig = { xl: 12, lg: 11, md: 2, sm: 2, xs: 2 }, containerStyles = {} }) => {
+const Banner = ({ image, height, links, titleVariant = {}, text, overlayColor, spacingConfig = { xl: 12, lg: 11, md: 2, sm: 2, xs: 2 }, containerStyles = {} }) => {
     const { palette, spacing } = useTheme();
 
     // Fade-in animation
@@ -70,9 +70,7 @@ const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, s
                             <Breadcrumbs separator={<KeyboardDoubleArrowRight sx={{ color: '#b71c1c' }} />} aria-label="breadcrumb">
                                 <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to="/">Home</Link>
                                 {/* <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to="/furniture/beds">Beds</Link> */}
-                                <Typography variant="body1" sx={{ fontWeight: 'bold', color: palette.info.light }}>
-                                    {text}
-                                </Typography>
+                                <Link style={{ fontWeight: 'bold', textDecoration: 'none', color: '#fdfdfd' }} to={""}>{links}</Link>
                             </Breadcrumbs>
                         </motion.div>
                         <Typography
@@ -83,7 +81,7 @@ const Banner = ({ title, image, height, titleVariant = {}, text, overlayColor, s
                                 fontWeight: 'bold',
                             }}
                         >
-                            {title}
+                            {text}
                         </Typography>
                     </Stack>
                 </Box>

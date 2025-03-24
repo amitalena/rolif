@@ -9,18 +9,18 @@ import { chairData } from './chairData';
 const SingleChairs = () => {
     const theme = useTheme();
     const navigate = useNavigate();
-    const handleClick = (id) => {
+    const handleClick = (id, title) => {
         const selectedFurniture = chairData.find((item) => item.id === id);
         if (selectedFurniture) {
-            // Save new furniture item in localStorage, replacing previous one
-            localStorage.setItem("Furniture", JSON.stringify(selectedFurniture));
-            navigate(`/furniture/chairs/${id}`);
+            localStorage.setItem("Furniture", JSON.stringify(selectedFurniture)); // Use "Tile" key
+            const modifiedTitle = title.replace(/ /g, "_");
+            navigate(`/singlefurniture/${id}?view=${modifiedTitle}`); // Navigate to the correct tile details page
         }
     };
     return (
         <>
             <Banner
-                title="Chairs"
+                links="chairs"
                 image={S1}
                 height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '40vh', xl: '40vh' }}
                 titleVariant="h2"
@@ -33,7 +33,7 @@ const SingleChairs = () => {
                 <Grid container spacing={2}>
                     {chairData?.map((view) => (
                         <Grid key={view.id} item xs={12} sm={6} md={6} lg={3} xl={3}>
-                            <CardSingle view={view} handleClick={handleClick} />
+                            <CardSingle view={view} handleClick={() => handleClick(view?.id, view?.title)} />
                         </Grid>
                     ))}
                 </Grid>

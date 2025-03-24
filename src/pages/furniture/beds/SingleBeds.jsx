@@ -8,18 +8,19 @@ import CardSingle from './CardSingle';
 const SingleBeds = () => {
     const theme = useTheme();
     const navigate = useNavigate();
-    const handleClick = (id) => {
+    const handleClick = (id, title) => {
         const selectedFurniture = bedData.find((item) => item.id === id);
         if (selectedFurniture) {
             // Save new furniture item in localStorage, replacing previous one
             localStorage.setItem("Furniture", JSON.stringify(selectedFurniture));
-            navigate(`/singlebeds/${id}`);
+            const modifiedTitle = title.replace(/ /g, "_");
+            navigate(`/singlefurniture/${id}?view=${modifiedTitle}`);
         }
     };
     return (
         <>
             <Banner
-                title="Beds"
+                links="beds"
                 image={S1}
                 height={{ sm: '35vh', md: '45vh', xs: '40vh', lg: '40vh', xl: '40vh' }}
                 titleVariant="h2"
@@ -32,7 +33,7 @@ const SingleBeds = () => {
                 <Grid container spacing={2}>
                     {bedData?.map((view) => (
                         <Grid key={view.id} item xs={12} sm={6} md={6} lg={3} xl={3}>
-                            <CardSingle view={view} handleClick={handleClick} />
+                            <CardSingle view={view} handleClick={() => handleClick(view?.id, view?.title)} />
                         </Grid>
                     ))}
                 </Grid>
