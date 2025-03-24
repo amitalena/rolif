@@ -59,17 +59,17 @@ const Contact = () => {
         {
             icon: <Map sx={{ color: '#fff', backgroundColor: palette.error.main, p: 1, borderRadius: '50%', height: '40px', width: '40px' }} />,
             title: 'Visit Us Anytime',
-            details: ['A-82', 'Noida Sector 63'],
+            details: ['Contracting Business Solutions A-158, Alpha-1', 'Greater Noida Uttar Pradesh - 201308 INDIA'],
         },
         {
             icon: <Drafts sx={{ color: '#fff', backgroundColor: palette.error.main, p: 1, borderRadius: '50%', height: '40px', width: '40px' }} />,
             title: 'Send an Email',
-            details: ['support@example.com', 'abc@example.com'],
+            details: ['info@rolifindia.com', 'www.rolifindia.com'],
         },
         {
             icon: <Headset sx={{ color: '#fff', backgroundColor: palette.error.main, p: 1, borderRadius: '50%', height: '40px', width: '40px' }} />,
             title: 'Contact Us',
-            details: ['+012 (345) 78967', '+9865322200'],
+            details: ['91+ 8802262626', '+91 120 4148686'],
         },
     ];
 
@@ -84,7 +84,7 @@ const Contact = () => {
                                     <CardContent>
                                         <Stack
                                             direction={{ xs: "column", sm: "column", md: "column", lg: 'column', xl: 'row' }}
-                                            spacing={2}
+                                            spacing={1}
                                             alignItems="center"
                                             justifyContent="center"
                                         >
@@ -95,7 +95,7 @@ const Contact = () => {
                                                 {card.icon}
                                             </Box>
 
-                                            <Box sx={{ p: spacing(2), color: palette.primary.main }}>
+                                            <Box sx={{ p: spacing(1), color: palette.primary.main }}>
                                                 <Typography variant="h5" fontWeight="bold">{card.title}</Typography>
                                                 {card.details.map((detail, i) => (
                                                     <Typography variant='body2' color='info.dark' key={i}>{detail}</Typography>
@@ -111,7 +111,7 @@ const Contact = () => {
                 </Box>
                 <Grid container spacing={2} sx={{ py: spacing(2) }}>
                     <Grid item lg={7} xl={8} xs={12}>
-                        <Card elevation={0} sx={{ p: { lg: 4, xs: 2, }, background: '#FFFFFF', backdropFilter: 'blur(5px)' }}>
+                        <Card elevation={0} sx={{ p: { lg: 3, xs: 2, }, background: '#FFFFFF', backdropFilter: 'blur(5px)' }}>
                             <CardContent component="form" onSubmit={formik.handleSubmit}>
                                 <Grid container spacing={2}>
                                     {['name', 'email', 'contact', 'message_title'].map((field, index) => (

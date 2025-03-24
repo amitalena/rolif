@@ -46,8 +46,8 @@ export const menuData = [
     {
         name: "Electrics Showroom",
         subMenu: [
-            // { name: "Wiring & Cables", route: "/electrics/wire&cable" },
-            // { name: "Lighting Installation", route: "/electrics/lightingsolution" },
+            { name: "Wiring & Cables", route: "/electrics/wire&cable" },
+            { name: "Lighting Installation", route: "/electrics/light_installation" },
             { name: "Switches & Sockets", route: "/electrics/switch_socket" },
         ],
     },

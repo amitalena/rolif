@@ -81,7 +81,7 @@ const FurniturePage = ({ id, imagePath, title, description }) => {
 
             <Splide options={sliderOptions}>
                 {allSlides.map((item) => (
-                    <SplideSlide key={item.id} style={{ display: "flex", justifyContent: "center" }}>
+                    <SplideSlide data-aos="zoom-in" key={item.id} style={{ display: "flex", justifyContent: "center" }}>
                         <CardComponent
                             id={item.id}
                             imagePath={item.imagePath}

@@ -9,7 +9,6 @@ import S1 from "../../assets/images/banners/banner/sofa.png";
 import Banner from "../../utils/Banner";
 import EnquiryForm from "../EnquiryForm";
 
-
 const TilesViewComponent = React.memo(({ view }) => {
     const { palette } = useTheme();
     const { id } = useParams();
@@ -17,7 +16,7 @@ const TilesViewComponent = React.memo(({ view }) => {
     const [zoomOrigin, setZoomOrigin] = useState("center");
     const [activeIndex, setActiveIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
-    const [enquiryModalOpen, setEnquiryModalOpen] = useState(false); // State for Enquiry Modal
+    const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
 
     useEffect(() => {
         const selectedFurniture = JSON.parse(localStorage.getItem("Furniture"));
@@ -60,14 +59,18 @@ const TilesViewComponent = React.memo(({ view }) => {
         setZoomOrigin(`${x}% ${y}%`);
     }, []);
 
-    const handleMouseLeave = useCallback(() => {
-        setZoomOrigin("center");
-    }, []);
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
 
-    // Handle Enquiry Form Submission
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+        setZoomOrigin("center");
+    };
+
     const handleEnquirySubmit = (formData) => {
-        console.log("Enquiry Form Data:", formData); // Replace with your submission logic
-        setEnquiryModalOpen(false); // Close modal after submission
+        console.log("Enquiry Form Data:", formData);
+        setEnquiryModalOpen(false);
     };
 
     return (
@@ -96,12 +99,14 @@ const TilesViewComponent = React.memo(({ view }) => {
             </Box>
             <Box sx={{ my: 2, px: { lg: 12, md: 2, sm: 2, xs: 2 } }}>
                 <Grid container spacing={3}>
+                    {/* Main Image Section */}
                     <Grid item xs={12} xl={6} md={10} lg={6}>
                         <Stack direction="row" spacing={2}>
                             <Card
                                 elevation={0}
-                                sx={{ height: "auto", width: "100%", overflow: "hidden", position: "relative" }}
+                                sx={{ width: "100%", overflow: "hidden", position: "relative" }}
                                 onMouseMove={handleMouseMove}
+                                onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
                                 <CardMedia
@@ -112,13 +117,46 @@ const TilesViewComponent = React.memo(({ view }) => {
                                         height: { lg: "60vh", md: "50vh", xs: "67vh" },
                                         width: "100%",
                                         transition: "transform 0.3s ease-in-out",
-                                        transformOrigin: zoomOrigin,
-                                        "&:hover": { cursor: "crosshair", transform: "scale(1.7)" },
+                                        "&:hover": {
+                                            cursor: "crosshair",
+                                            "&::before": {
+                                                content: '""',
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)",
+                                                width: "150px",
+                                                height: "60px",
+                                                border: "1px solid #fff",
+                                                pointerEvents: "none" // Ensures clicks pass through the box
+                                            }
+                                        },
                                     }}
                                 />
                             </Card>
                         </Stack>
                     </Grid>
+
+                    {/* Zoom Preview Card */}
+                    {isHovered && (
+                        <Grid item xs={12} xl={6} md={4} lg={6}>
+                            <Card elevation={0} sx={{ width: "100%", height: "100%", overflow: "hidden" }}>
+                                <CardMedia
+                                    component="img"
+                                    image={selectedImage}
+                                    alt="Zoom Preview"
+                                    sx={{
+                                        width: "100%",
+                                        height: { lg: "60vh", md: "50vh", xs: "67vh" },
+                                        transformOrigin: zoomOrigin,
+                                        transform: "scale(1.8)",
+                                        transition: "transform 0.3s ease-in-out",
+                                    }}
+                                />
+                            </Card>
+                        </Grid>
+                    )}
+
                     {/* Product Details */}
                     <Grid item xs={12} xl={4} md={12} lg={4}>
                         <Stack spacing={2}>
@@ -126,7 +164,6 @@ const TilesViewComponent = React.memo(({ view }) => {
                                 {view.title}
                             </Typography>
                             <Typography variant="body2">{view.description}</Typography>
-                            {/* Enquiry Button */}
                             <Button
                                 variant="contained"
                                 color="primary"
@@ -137,12 +174,12 @@ const TilesViewComponent = React.memo(({ view }) => {
                             </Button>
                         </Stack>
                     </Grid>
+
+                    {/* Thumbnails */}
                     <Grid item xs={12} xl={12} lg={12} md={2} sm={12}>
                         <Stack
                             spacing={2}
                             sx={{ display: "flex", alignItems: "center", flexDirection: 'row' }}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
                         >
                             <IconButton onClick={handlePrevImage} size="small">
                                 <ArrowBackIos fontSize="small" />
@@ -151,19 +188,14 @@ const TilesViewComponent = React.memo(({ view }) => {
                                 <Box
                                     key={index}
                                     sx={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        height: { md: "100px", xs: '100%' },
-                                        width: { md: "100px", xs: '100%' },
+                                        height: "100px",
+                                        width: "100px",
                                         cursor: "pointer",
-                                        transition: "transform 0.3s ease",
                                         border: activeIndex === index ? "2px solid #1976d2" : "none",
-                                        "&:hover": { transform: "scale(1.05)" },
                                     }}
                                     onClick={() => handleThumbnailClick(image.imagePath, index)}
                                 >
-                                    <img src={image.imagePath} alt={`Thumbnail ${index + 1}`} height="90%" width="90%" />
+                                    <img src={image.imagePath} alt={`Thumbnail ${index + 1}`} height="100%" width="100%" />
                                 </Box>
                             ))}
                             <IconButton onClick={handleNextImage} size="small">
@@ -173,13 +205,7 @@ const TilesViewComponent = React.memo(({ view }) => {
                     </Grid>
                 </Grid>
             </Box>
-            {/* Enquiry Form Modal */}
-            <EnquiryForm
-                open={enquiryModalOpen}
-                onClose={() => setEnquiryModalOpen(false)}
-                onSubmit={handleEnquirySubmit}
-            />
-            {/* <ReletedProduct /> */}
+            <EnquiryForm open={enquiryModalOpen} onClose={() => setEnquiryModalOpen(false)} onSubmit={handleEnquirySubmit} />
         </>
     );
 });

@@ -66,7 +66,7 @@ const Footer = () => {
                 {/* About Links */}
                 <Grid item xs={12} sm={6} md={3} lg={1.5} xl={1.5}>
                     <Typography variant='h6' color="primary" fontWeight="bold" textTransform="uppercase" mb={1}>
-                        About Us
+                        Helps Links
                         {/* <Divider sx={{ background: theme.palette.primary.deep, height: '20px', width: '0px' }} orientation='vertical' /> */}
                     </Typography>
 

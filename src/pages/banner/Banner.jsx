@@ -113,12 +113,12 @@ const Banner = () => {
                                         }}
                                     >
                                         <Stack spacing={2} direction="column" justifyContent="space-between">
-                                            <Typography variant="h2" sx={{
+                                            <Typography data-aos="fade-down" variant="h2" sx={{
                                                 fontSize: { xs: "2.1rem", sm: "3.25rem" }
                                             }} textAlign="left" color="info" fontWeight="bold">
                                                 {item.title}
                                             </Typography>
-                                            <Box>
+                                            <Box data-aos="fade-up">
                                                 <Button variant="outlined" sx={{ mt: 2 }}>
                                                     View Details
                                                 </Button>

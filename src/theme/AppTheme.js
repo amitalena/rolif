@@ -1,8 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import "@fontsource/lato";
-import "@fontsource/lato/400.css";
-import "@fontsource/lato/400-italic.css";
-
 const AppTheme = createTheme({
     breakpoints: {
         values: {
@@ -107,57 +103,55 @@ const AppTheme = createTheme({
         borderRadius: 0
     },
     typography: {
-        fontFamily: 'Lato',
+        fontFamily: "'Poppins', sans-serif",
         fontSize: 25,
         htmlFontSize: 30,
         h1: {
-            // fontWeight: 900,
+            fontWeight: 900,
             fontSize: "6rem",
             lineHeight: 1.167,
             letterSpacing: "-0.01562em"
         },
         h2: {
-            // fontWeight: 700,
+            fontWeight: 700,
             fontSize: "3.75rem",
             lineHeight: 1.2,
             letterSpacing: "-0.00833em"
         },
         h3: {
-            // fontWeight: 500,
+            fontWeight: 500,
             fontSize: "3rem",
             lineHeight: 1.167,
             letterSpacing: "0em"
         },
         h4: {
-            // fontWeight: 300,
+            fontWeight: 300,
             fontSize: "1.650rem",
             lineHeight: 1.235,
             letterSpacing: "0.00735em"
         },
         h5: {
-            // fontWeight: 400,
+            fontWeight: 400,
             fontSize: "1.2rem",
             lineHeight: 1.334,
             letterSpacing: "0em"
         },
         h6: {
-            // fontWeight: 200,
+            fontWeight: 200,
             fontSize: "1.25rem",
             lineHeight: 1.2,
             letterSpacing: "0.0075em",
             textAlign: 'left'
         },
         body1: {
-            fontFamily: "Lato",
-            // fontWeight: 700,
+            fontWeight: 500,
             fontSize: "0.978rem",
             lineHeight: 1.2,
             letterSpacing: "0.01038em",
             textAlign: 'left'
         },
         body2: {
-            fontFamily: "Lato",
-            // fontWeight: 400,
+            fontWeight: 400,
             fontSize: "0.816rem",
             lineHeight: 1.43,
             letterSpacing: "0.01971em",
@@ -179,8 +173,8 @@ const AppTheme = createTheme({
             textAlign: 'left'
         },
         button: {
-            fontWeight: 900,
-            fontSize: "0.875rem",
+            fontWeight: 100,
+            fontSize: "0.775rem",
             lineHeight: 1.45,
             letterSpacing: "0.02857em",
             textTransform: "capitalize",
@@ -208,6 +202,33 @@ const AppTheme = createTheme({
         }
     },
     components: {
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "0px",
+                    padding: "8px 10px",
+                    fontSize: "0.796rem",
+                    transition: "all 0.3s ease-in-out",
+                    outline: "none", // Prevent focus outline
+                    "&:hover": {
+                        transform: "scale(1.05)",
+                    },
+                    "&:focus": {
+                        outline: "none",
+                        boxShadow: "none", // Remove focus border
+                    },
+                    "&:focus-visible": {
+                        outline: "none",
+                        boxShadow: "none", // Ensures no focus outline in any scenario
+                    },
+                    "&:active": {
+                        outline: "none",
+                        boxShadow: "none", // Prevents outline on click
+                    },
+                },
+            },
+        },
+
         MuiTableCell: {
             styleOverrides: {
                 root: {
