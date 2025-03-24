@@ -202,6 +202,32 @@ const AppTheme = createTheme({
         }
     },
     components: {
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "0px",
+                    padding: "8px 10px",
+                    fontSize: "0.796rem",
+                    transition: "all 0.3s ease-in-out",
+                    outline: "none", // Prevent focus outline
+                    "&:hover": {
+                        transform: "scale(1.05)",
+                    },
+                    "&:focus": {
+                        outline: "none",
+                        boxShadow: "none", // Remove focus border
+                    },
+                    "&:focus-visible": {
+                        outline: "none",
+                        boxShadow: "none", // Ensures no focus outline in any scenario
+                    },
+                    "&:active": {
+                        outline: "none",
+                        boxShadow: "none", // Prevents outline on click
+                    },
+                },
+            },
+        },
         MuiButton: {
             styleOverrides: {
                 root: {
